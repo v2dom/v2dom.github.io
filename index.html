@@ -1,7 +1,252 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominick Woodward</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        /* Particle Background */
+        #particles-js {
+            position: fixed; /* Covers the whole screen */
+            width: 100%;
+            height: 100%;
+            background: #170b1b; /* Dark theme background */
+            z-index: -1; /* Keeps it behind other content */
+        }
+
+        /* Body Styles */
+        body {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 50px 20px;
+            margin: 50px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+
+    </style>
+</head>
 <body>
-<h1>Dominick Woodward</h1>
-<p>My NEW website is under construction! Thanks for checking me out, and feel free to contact me at linkedin.com/in/v2dom</p>
+
+    <!-- Particles.js Background -->
+    <div id="particles-js"></div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container" data-aos="fade-up">
+            <h1>Hi, I'm Dominick Woodward, a Summer 2025 Arizona State University CIS grad.</h1>
+            <p>Thank you for visiting my personal site! I'm a hard-working and curious individual based in the greater 
+                Phoenix area exploring the exciting world of technology. Through my time at Arizona State University, I 
+                have experience with Java, SQL, Excel, and JavaScript; and I enjoy experimenting with tools like Canva, 
+                Photoshop, and Premiere Pro. I like to use Python on my personal projects. While I’m still learning, I’m 
+                eager to improve and take on challenges.<br><br>
+
+                Outside of tech, I’m passionate about staying active with weightlifting, yoga, and sports–specifically 
+                volleyball. I also love brain teasers, listening to music, philosophy and ethics, diving into intricate 
+                video essays and documentaries about almost anything, and exploring my creative outlets like digital art. 
+                I'm big into video games, especially shooters.<br><br>
+
+                I’m especially intrigued by topics like front-end, AI, cybersecurity, and product management, and I look 
+                forward to growing my skills in these areas. I’m dedicated to putting in the effort to achieve my goals. 
+                Feel free to check my social media links and connect with me on LinkedIn!</p>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <div class="container" data-aos="fade-up">
+            <h2>Resume</h2>
+            <p>Currently pursuing a B.S. in Computer Information Systems at ASU (3.78 GPA, Expected Grad: Oct 2025).</p>
+            <p>Experience in retail, management, and customer service, plus leadership in sports and student government.</p>
+            <a href="resume.pdf" target="_blank">Download Resume (PDF)</a>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container" data-aos="fade-up">
+            <h2>Projects</h2>
+
+            <div class="project" data-aos="fade-right">
+                <h3>GUESS THE LOGO!</h3>
+                <p>A fun Roblox game where players guess brand logos to progress through levels.</p>
+                <a href="https://www.roblox.com/games/your-game-link" target="_blank">Play GUESS THE LOGO!</a>
+            </div>
+
+            <div class="project" data-aos="fade-left">
+                <h3>Super Clicker</h3>
+                <p>An incremental game where players earn money by clicking and upgrading pets for multipliers.</p>
+                <a href="https://www.roblox.com/games/your-game-link" target="_blank">Play Super Clicker</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p>📩 Email: <a href="mailto:dominick@v2dom.dev">dominick@v2dom.dev</a></p>
+            <p>🔗 <a href="https://linkedin.com/in/v2dom" target="_blank">LinkedIn</a> | 📷 <a href="#">Instagram</a> | 🎥 <a href="#">YouTube</a></p>
+        </div>
+    </section>
+
+    <!-- Include AOS.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Particles.js Script -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", 
+        {
+  "particles": {
+    "number": {
+      "value": 202,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#a5a1aa"
+    },
+    "shape": {
+      "type": "polygon",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 7
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 17.053621458328248,
+        "size_min": 0.1,
+        "sync": true
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 3.206824121731046,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 245,
+        "line_linked": {
+          "opacity": 0.05
+        }
+      },
+      "bubble": {
+        "distance": 1500,
+        "size": 2,
+        "duration": 0.7192807192807193,
+        "opacity": 0.8951048951048951,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 250,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+    </script>
 </body>
 </html>
