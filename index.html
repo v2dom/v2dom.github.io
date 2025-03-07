@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dominick Woodward</title>
     <link rel="icon" href="images/icon.png">
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
         html {
@@ -69,32 +68,26 @@
             background: #170b1b;
         }
 
-        
-
-        /* Navigation Buttons */
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 20px;
-            transition: 0.3s;
+        .container2 {
+          max-width: 1000px;
+          margin: auto;
+          background: #170b1b;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+          display: flex;
+          align-items: center; /* Align items vertically */
+          justify-content: space-between; /* Space elements */
         }
 
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
+        .text {
+          width: 100%; /* Adjust text width */
+          color: var(--text-color);
         }
 
-        .prev {
-            left: 10px;
-        }
-
-        .next {
-            right: 10px;
+        .image {
+          width: 90%; /* Adjust image width */
+          text-align: right; /* Align image to the right */
         }
 
 
@@ -107,57 +100,16 @@
 
     <!-- About Section -->
     <section id="about">
-        <div class="container" data-aos="fade-up">
+        <div class="container2" data-aos="fade-up" style="background: var(--main-bg-color); border-radius: var(--border-radius);">
             <h1>Hi, I'm Dominick Woodward, a Summer 2025 Arizona State University CIS grad.</h1>
 
-            <!-- Carousel Container -->
-            <div class="carousel-container">
-                <button class="prev">&#10094;</button>
-                <div class="carousel">
-                    <div class="carousel-slide">
-                        <img src="images/image1.png" alt="Image 1">
-                        <img src="images/image2.png" alt="Image 2">
-                        <img src="images/image3.png" alt="Image 3">
-                        <img src="images/image4.png" alt="Image 4">
-                        <img src="images/image5.png" alt="Image 5">
-                        <img src="images/image6.png" alt="Image 6">
-                        <img src="images/image7.png" alt="Image 7">
-                        <img src="images/image8.png" alt="Image 8">
-                    </div>
-                </div>
-                <button class="next">&#10095;</button>
+            <div class="image">
+                <img src="images/image5.png" style="max-width: 90%; height: auto;">
             </div>
-        
-            <script>
-            const carousel = document.querySelector('.carousel');
-            const slides = document.querySelectorAll('.carousel-slide');
-            let index = 0;
+        </div>
 
-            function showSlide(idx) {
-                const offset = -idx * 100;
-                carousel.style.transform = `translateX(${offset}%)`;
-            }
 
-            document.querySelector('.next').addEventListener('click', () => {
-                index = (index + 1) % slides.length;
-                showSlide(index);
-            });
-
-            document.querySelector('.prev').addEventListener('click', () => {
-                index = (index - 1 + slides.length) % slides.length;
-                showSlide(index);
-            });
-
-            // Auto-slide every 3 seconds (optional)
-            setInterval(() => {
-               index = (index + 1) % slides.length;
-                showSlide(index);
-            }, 3000);
-
-            showSlide(index);
-
-            </script>
-
+        <div class="container" data-aos="fade-up";>
             <p>Thank you for visiting my personal site! I'm a hard-working and curious individual based in the greater 
                 Phoenix area exploring the exciting world of technology. Through my time at Arizona State University, I 
                 have experience with Java, SQL, Excel, and JavaScript; and I enjoy experimenting with tools like Canva, 
