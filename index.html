@@ -7,6 +7,37 @@
     <link rel="icon" href="images/icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
+
+        /* Sticky Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #170b1b;
+            text-align: center;
+            font-family: Garamond, serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            opacity: 0; /* Start hidden */
+            transform: translateY(-100%);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .header.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .content {
+            margin-top: 70px; /* Adjust based on header height */
+            text-align: center;
+        }
+        
         html {
             scroll-behavior: smooth;
         }
@@ -115,6 +146,12 @@
 
     <!-- About Section -->
     <section id="about">
+
+      <div class="header" id="header">
+        Dominick Woodward
+      </div>
+    
+
         <div class="container2" data-aos="fade-up" style="background: var(--main-bg-color); border-radius: var(--border-radius);">
             <h1>Hi, I'm Dominick Woodward, a Summer 2025 Arizona State University CIS grad.</h1>
 
@@ -136,10 +173,22 @@
       
               // Update the img src attribute
               document.getElementById("randomImage").src = "images/" + randomImage;
+
+              window.addEventListener("scroll", function () {
+              const header = document.getElementById("header");
+              const imageContainer = document.querySelector(".image-container");
+              const imageBottom = imageContainer.offsetTop + imageContainer.offsetHeight;
+
+              if (window.scrollY > imageBottom) {
+                  header.classList.add("visible");
+              } else {
+                  header.classList.remove("visible");
+              }
+              });
           </script>
         </div>
-
-
+        
+        <div class="content">
         <div class="container" data-aos="fade-up";>
             <p>Thank you for visiting my personal site! I'm a hard-working and curious individual based in the greater 
                 Phoenix area exploring the exciting world of technology. Through my time at Arizona State University, I 
@@ -209,6 +258,7 @@
                 🔗 <a href="https://app.joinhandshake.com/profiles/43359395">Handshake</a></p>
         </div>
     </section>
+    </div>
 
     <!-- Include AOS.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
