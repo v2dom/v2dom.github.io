@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dominick Woodward</title>
-    <link rel="icon" href="images/icon.png"
+    <link rel="icon" href="images/icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
         html {
@@ -68,30 +68,7 @@
             background: #170b1b;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        .carousel-container {
-            position: relative;
-            width: 80%;
-            max-width: 700px;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
-        }
-
-        .carousel-slide {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel-slide img {
-            width: 100%;
-            border-radius: 10px;
-        }
+        
 
         /* Navigation Buttons */
         .prev, .next {
@@ -132,19 +109,37 @@
         <div class="container" data-aos="fade-up">
             <h1>Hi, I'm Dominick Woodward, a Summer 2025 Arizona State University CIS grad.</h1>
 
-            <div class="carousel-container">
-                <div class="carousel-slide">
-                    <img src="images/image1.png" alt="Image 1">
-                    <img src="images/image2.png" alt="Image 2">
-                    <img src="images/image3.png" alt="Image 3">
-                    <img src="images/image4.png" alt="Image 4">
-                    <img src="images/image5.png" alt="Image 5">
-                    <img src="images/image6.png" alt="Image 6">
-                    <img src="images/image7.png" alt="Image 7">
-                    <img src="images/image8.png" alt="Image 8">
-                </div>
-                <button class="prev">&#10094;</button>
-                <button class="next">&#10095;</button>
+            <input type="radio" name="position" />
+            <input type="radio" name="position" />
+            <input type="radio" name="position" />
+            <input type="radio" name="position" checked/>
+            <input type="radio" name="position" />
+            <input type="radio" name="position" />
+            <input type="radio" name="position" />
+            <main id="carousel">
+            <div class="item">
+            <img src="images/image1.jpg">
+            </div>
+            <div class="item">
+            <img src="images/image2.jpg">
+            </div>
+            <div class="item">
+            <img src="images/image3.jpg">
+            </div>
+            <div class="item">
+            <img src="images/image4.jpg">
+            </div>
+            <div class="item">
+            <img src="images/image5.jpg">
+            </div>
+            <div class="item">
+            <img src="images/image6.jpg">
+            </div>
+            <div class="item">
+            <img src="images/image8.jpg">
+            </div>
+            <div class="item">
+            <img src="images/image7.jpg">
             </div>
         
             <script>
