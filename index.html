@@ -136,6 +136,16 @@
           object-fit: cover;
         }
 
+        .image {
+          width: 100%; /* Makes the image width match its parent container */
+          max-width: 600px; /* Optional: Set a maximum width for the image */
+          height: auto; /* Keeps the aspect ratio intact */
+          display: block; /* Ensures the image is block-level (no inline issues) */
+          margin: 0 auto; /* Centers the image horizontally */
+        }
+
+
+
 
     </style>
 </head>
@@ -157,7 +167,7 @@
 
             <div class="image-container fixed-image">
               <img id="randomImage" src="">
-          </div>
+            </div>
           
       
           <script>
@@ -240,6 +250,8 @@
 
             <div class="project" data-aos="fade-right">
                 <h3>GUESS THE LOGO!</h3>
+                <img src="images/guesslogo1.png" class="image"/>
+                <img src="images/guesslogo2.png" class="image"/>
                 <p>A fun Roblox game where players guess brand logos to progress through levels.</p>
                 <a href="https://www.roblox.com/games/137914350299318/XMAS-GUESS-THE-LOGO" target="_blank">Play GUESS THE LOGO!</a>
                 <p><br><br></p>
@@ -250,7 +262,7 @@
             <div class="project" data-aos="fade-left">
               <h3>v2bron</h3>
               <p>Personal use Discord bot with automation, moderation, and entertainment commands.</p>
-              <a href="https://github.com/v2dom/v2bron" target="_blank">Visit v2bron</a>
+              <a href="https://github.com/v2dom/v2bron" target="_blank">Visit v2bron on GitHub</a>
             </div>
 
             <div class="project" data-aos="fade-right">
@@ -262,7 +274,7 @@
             <div class="project" data-aos="fade-left">
               <h3>Music Player Overlay</h3>
               <p>Personal use Discord bot with automation, moderation, and entertainment commands.</p>
-              <a href="https://www.v2dom.dev" target="_blank">Visit Music Player Overlay</a>
+              <a href="https://github.com/v2dom/audioplayer" target="_blank">Visit Music Player Overlay on GitHub</a>
             </div>
 
         </div>
