@@ -6,19 +6,25 @@
     <title>Dominick Woodward</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* Particle Background */
         #particles-js {
             position: fixed; /* Covers the whole screen */
             width: 100%;
             height: 100%;
             background: #170b1b; /* Dark theme background */
+            top: 0;
+            left: 0;
             z-index: -1; /* Keeps it behind other content */
         }
 
         /* Body Styles */
         body {
-            font-family: Garamond, serif;
-            font-size: x-large;
+            font-family: Tahoma, serif;
+            font-size: large;
             text-align: center;
             color: #ffffff;
             margin: 0;
@@ -43,15 +49,15 @@
             box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
         }
 
-        h1, h2 {
+        h1, h2, h3 {
             color: #ffffff;
-            font-family: Georgia, serif;
+            font-family: Garamond, serif;
+            font-size: xx-large;
         }
 
         a {
             color: #27293d;
             text-decoration: none;
-            font-weight: bold;
         }
 
         .project {
@@ -60,6 +66,58 @@
             border-radius: 0px;
             background: #170b1b;
         }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 80%;
+            max-width: 700px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Navigation Buttons */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
 
     </style>
 </head>
@@ -72,14 +130,65 @@
     <section id="about">
         <div class="container" data-aos="fade-up">
             <h1>Hi, I'm Dominick Woodward, a Summer 2025 Arizona State University CIS grad.</h1>
+
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="images/image1.jpg" alt="Image 1">
+                    <img src="images/image2.jpg" alt="Image 2">
+                    <img src="images/image3.jpg" alt="Image 3">
+                    <img src="images/image4.jpg" alt="Image 4">
+                    <img src="images/image5.jpg" alt="Image 5">
+                    <img src="images/image6.jpg" alt="Image 6">
+                    <img src="images/image7.jpg" alt="Image 7">
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+        
+            <script>
+                const slideContainer = document.querySelector('.carousel-slide');
+                const images = document.querySelectorAll('.carousel-slide img');
+                const prevBtn = document.querySelector('.prev');
+                const nextBtn = document.querySelector('.next');
+        
+                let index = 0;
+                const totalImages = images.length;
+                const imageWidth = images[0].clientWidth;
+        
+                function showSlide(index) {
+                    if (index >= totalImages) {
+                        index = 0;
+                    } else if (index < 0) {
+                        index = totalImages - 1;
+                    }
+                    slideContainer.style.transform = `translateX(${-index * imageWidth}px)`;
+                }
+        
+                nextBtn.addEventListener('click', () => {
+                    index++;
+                    showSlide(index);
+                });
+        
+                prevBtn.addEventListener('click', () => {
+                    index--;
+                    showSlide(index);
+                });
+        
+                // Auto-slide every 3 seconds
+                setInterval(() => {
+                    index++;
+                    showSlide(index);
+                }, 3000);
+            </script>
+
             <p>Thank you for visiting my personal site! I'm a hard-working and curious individual based in the greater 
                 Phoenix area exploring the exciting world of technology. Through my time at Arizona State University, I 
                 have experience with Java, SQL, Excel, and JavaScript; and I enjoy experimenting with tools like Canva, 
                 Photoshop, and Premiere Pro. I like to use Python on my personal projects. While I’m still learning, I’m 
                 eager to improve and take on challenges.<br><br>
 
-                Outside of tech, I’m passionate about staying active with weightlifting, yoga, and sports–specifically 
-                volleyball. I also love brain teasers, listening to music, philosophy and ethics, diving into intricate 
+                Outside of tech, I’m passionate about staying active with weightlifting, yoga, and sports (specifically 
+                volleyball!). I also love brain teasers, listening to music, philosophy and ethics, diving into intricate 
                 video essays and documentaries about almost anything, and exploring my creative outlets like digital art. 
                 I'm big into video games, especially shooters.<br><br>
 
@@ -222,7 +331,7 @@
     }
   },
   "interactivity": {
-    "detect_on": "canvas",
+    "detect_on": "window",
     "events": {
       "onhover": {
         "enable": true,
