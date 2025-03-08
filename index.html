@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,6 @@
     <link rel="icon" href="images/icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
-
-        /* Sticky Header */
         .header {
             position: fixed;
             top: 0;
@@ -23,7 +22,7 @@
             padding: 15px 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            opacity: 0; /* Start hidden */
+            opacity: 0;
             transform: translateY(-100%);
             transition: opacity 0.5s ease, transform 0.5s ease;
         }
@@ -34,26 +33,24 @@
         }
 
         .content {
-            margin-top: 70px; /* Adjust based on header height */
+            margin-top: 70px;
             text-align: center;
         }
-        
+
         html {
             scroll-behavior: smooth;
         }
 
-        /* Particle Background */
         #particles-js {
-            position: fixed; /* Covers the whole screen */
+            position: fixed;
             width: 100%;
             height: 100%;
-            background: #170b1b; /* Dark theme background */
+            background: #170b1b;
             top: 0;
             left: 0;
-            z-index: -1; /* Keeps it behind other content */
+            z-index: -1;
         }
 
-        /* Body Styles */
         body {
             font-family: Tahoma, serif;
             font-size: large;
@@ -66,7 +63,6 @@
             animation: gradientBG 10s ease infinite;
         }
 
-        /* Section Styles */
         section {
             padding: 50px 20px;
             margin: 50px 0;
@@ -83,12 +79,13 @@
 
         h2 {
             color: #ffffff;
-            text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+            text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
             font-family: Garamond, serif;
             font-size: xx-large;
         }
 
-        h1, h3 {
+        h1,
+        h3 {
             color: #ffffff;
             font-family: Garamond, serif;
             font-size: xx-large;
@@ -107,197 +104,188 @@
         }
 
         .container2 {
-          max-width: 1000px;
-          margin: auto;
-          background: #170b1b;
-          padding: 20px;
-          border-radius: 10px;
-          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
-          display: flex;
-          align-items: center; /* Align items vertically */
-          justify-content: space-between; /* Space elements */
+            max-width: 1000px;
+            margin: auto;
+            background: #170b1b;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .text {
-          width: 100%; /* Adjust text width */
-          color: var(--text-color);
+            width: 100%;
+            color: var(--text-color);
         }
 
         .image-container {
-          width: 90%; /* Adjust image width */
-          text-align: right; /* Align image to the right by default */
-          display: flex;
-          justify-content: flex-end; /* Push the image to the right */
+            width: 90%;
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
         }
 
         .fixed-image {
-          width: 1200px;
-          height: 700px;
-          overflow: hidden;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+            width: 1200px;
+            height: 700px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .fixed-image img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        /* Responsive for small screens (phones) */
         @media (max-width: 768px) {
-          .container2 {
-            display: flex;
-            flex-direction: column; /* Stack items vertically */
-            align-items: center; /* Center content */
-            text-align: center;
-          }
+            .container2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
 
-          .image-container {
-            width: 100%; /* Full width on small screens */
-            text-align: center; /* Center image */
-            justify-content: center;
-            margin-top: 10px;
-          }
+            .image-container {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+                margin-top: 10px;
+            }
 
-          .fixed-image {
-            width: 100%; /* Make image responsive */
-            height: auto;
-          }
+            .fixed-image {
+                width: 100%;
+                height: auto;
+            }
 
-          .fixed-image img {
-            width: 100%;
-            height: auto;
-          }
+            .fixed-image img {
+                width: 100%;
+                height: auto;
+            }
         }
 
         .image {
-          width: 100%; /* Makes the image width match its parent container */
-          max-width: 600px; /* Optional: Set a maximum width for the image */
-          height: auto; /* Keeps the aspect ratio intact */
-          display: block; /* Ensures the image is block-level (no inline issues) */
-          margin: 0 auto; /* Centers the image horizontally */
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
-
-
-
-
     </style>
 </head>
-<body>
 
-    <!-- Particles.js Background -->
+
+
+<body>
+  <script src="particlescript.js"></script>
     <div id="particles-js"></div>
 
-    <!-- About Section -->
     <section id="about">
 
-      <div class="header" id="header">
-        Dominick Woodward
-      </div>
-    
+        <div class="header" id="header">
+            Dominick Woodward
+        </div>
+
 
         <div class="container2" data-aos="fade-up" style="background: var(--main-bg-color); border-radius: var(--border-radius);">
             <h1>Hi, I'm Dominick Woodward, a Summer 2025 Arizona State University CIS grad.</h1>
 
             <div class="image-container fixed-image">
-              <img id="randomImage" src="">
+                <img id="randomImage" src="">
             </div>
-          
-      
-          <script>
-              // Array of image file names
-              const images = [
-                  "image1.png", "image2.png", "image3.png", "image4.png",
-                  "image5.png", "image6.png", "image7.png", "image8.png"
-              ];
-      
-              // Pick a random image
-              const randomIndex = Math.floor(Math.random() * images.length);
-              const randomImage = images[randomIndex];
-      
-              // Update the img src attribute
-              document.getElementById("randomImage").src = "images/" + randomImage;
 
-              window.addEventListener("scroll", function () {
-              const header = document.getElementById("header");
-              const imageContainer = document.querySelector(".image-container");
-              const imageBottom = imageContainer.offsetTop + imageContainer.offsetHeight;
 
-              if (window.scrollY > imageBottom) {
-                  header.classList.add("visible");
-              } else {
-                  header.classList.remove("visible");
-              }
-              });
-          </script>
+            <script>
+                const images = [
+                    "image1.png", "image2.png", "image3.png", "image4.png",
+                    "image5.png", "image6.png", "image7.png", "image8.png"
+                ];
+
+                const randomIndex = Math.floor(Math.random() * images.length);
+                const randomImage = images[randomIndex];
+
+                document.getElementById("randomImage").src = "images/" + randomImage;
+
+                window.addEventListener("scroll", function() {
+                    const header = document.getElementById("header");
+                    const imageContainer = document.querySelector(".image-container");
+                    const imageBottom = imageContainer.offsetTop + imageContainer.offsetHeight;
+
+                    if (window.scrollY > imageBottom) {
+                        header.classList.add("visible");
+                    } else {
+                        header.classList.remove("visible");
+                    }
+                });
+            </script>
         </div>
-        
+
         <div class="content">
-        <div class="container" data-aos="fade-up";>
-            <p>Thank you for visiting my personal site! I'm a hard-working and curious individual based in the greater 
-                Phoenix area exploring the exciting world of technology. Through my time at Arizona State University, I 
-                have experience with Java, SQL, Excel, and JavaScript; and I enjoy experimenting with tools like Canva, 
-                Photoshop, and Premiere Pro. I like to use Python on my personal projects. While I’m still learning, I’m 
-                eager to improve and take on challenges.<br><br>
+            <div class="container" data-aos="fade-up" ;>
+                <p>Thank you for visiting my personal site! I'm a hard-working and curious individual based in the greater
+                    Phoenix area exploring the exciting world of technology. Through my time at Arizona State University, I
+                    have experience with Java, SQL, Excel, and JavaScript; and I enjoy experimenting with tools like Canva,
+                    Photoshop, and Premiere Pro. I like to use Python on my personal projects. While I’m still learning, I’m
+                    eager to improve and take on challenges.<br><br>
 
-                Outside of tech, I’m passionate about staying active with weightlifting, yoga, and sports (specifically 
-                volleyball!). I also love brain teasers, listening to music, philosophy and ethics, diving into intricate 
-                video essays and documentaries about almost anything, and exploring my creative outlets like digital art. 
-                I'm big into video games, especially shooters.<br><br>
+                    Outside of tech, I’m passionate about staying active with weightlifting, yoga, and sports (specifically
+                    volleyball!). I also love brain teasers, listening to music, philosophy and ethics, diving into intricate
+                    video essays and documentaries about almost anything, and exploring my creative outlets like digital art.
+                    I'm big into video games, especially shooters.<br><br>
 
-                I’m especially intrigued by topics like front-end, AI, cybersecurity, and product management, and I look 
-                forward to growing my skills in these areas. I’m dedicated to putting in the effort to achieve my goals. 
-                Feel free to check my social media links and connect with me on LinkedIn!</p>
-        </div>
+                    I’m especially intrigued by topics like front-end, AI, cybersecurity, and product management, and I look
+                    forward to growing my skills in these areas. I’m dedicated to putting in the effort to achieve my goals.
+                    Feel free to check my social media links and connect with me on LinkedIn!</p>
+            </div>
     </section>
 
-    <!-- Resume Section -->
     <section id="resume">
         <div class="container" data-aos="fade-up">
             <h2>I'm looking for work opportunities in the tech field! Find out if I'm the right person for you!</h2>
             <a href="Dominick Woodward Resume from v2dom.dev.pdf" download>Download a PDF version of my resume!</a>
-            <p>Honors/dual enrollment high school graduate (4.63 GPA), Associate of Arts, Science, & General Studies at 
-                Rio Salado College, and currently attending Arizona State University Tempe campus for Computer Information 
-                Systems BS degree (3.80 GPA, Exp. Grad Aug. 2025). Statewide recognized athlete, YourValley published sports 
-                reporter, completion of Advanced Digital Communications and Advanced Marketing CTE courses. Experience in 
+            <p>Honors/dual enrollment high school graduate (4.63 GPA), Associate of Arts, Science, & General Studies at
+                Rio Salado College, and currently attending Arizona State University Tempe campus for Computer Information
+                Systems BS degree (3.80 GPA, Exp. Grad Aug. 2025). Statewide recognized athlete, YourValley published sports
+                reporter, completion of Advanced Digital Communications and Advanced Marketing CTE courses. Experience in
                 retail, management, food service, and customer service.</p>
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects">
         <div class="container" data-aos="fade-up">
             <h2>Projects<br><br></h2>
             <h3>Roblox Game Development</h3>
-            <p>I used LUA and Blender to code logic and create 
-              textures. Generated 33,000 Robux (around $115 USD) in revenue.</p>
+            <p>I used LUA and Blender to code logic and create
+                textures. Generated 33,000 Robux (around $115 USD) in revenue.</p>
 
             <div class="project" data-aos="fade-right">
                 <h3>Super Clicker</h3>
-                <img src="images/clicker1.png" class="image"/>
-                <img src="images/clicker2.png" class="image"/>
-                <img src="images/clicker3.png" class="image"/>
+                <img src="images/clicker1.png" class="image" />
+                <img src="images/clicker2.png" class="image" />
+                <img src="images/clicker3.png" class="image" />
                 <p>An incremental game where players earn money by clicking and upgrading pets for multipliers.</p>
                 <a href="https://www.roblox.com/games/81837700508336/Super-Clicker" target="_blank">Play Super Clicker</a>
             </div>
 
             <div class="project" data-aos="fade-left">
                 <h3>BloxRPG</h3>
-                <img src="images/BloxRPG2.png" class="image"/>
-                <img src="images/BloxRPG3.png" class="image"/>
-                <img src="images/BloxRPG4.png" class="image"/>
-                <img src="images/BloxRPG5.png" class="image"/>
-                <img src="images/BloxRPG6.png" class="image"/>
+                <img src="images/BloxRPG2.png" class="image" />
+                <img src="images/BloxRPG3.png" class="image" />
+                <img src="images/BloxRPG4.png" class="image" />
+                <img src="images/BloxRPG5.png" class="image" />
+                <img src="images/BloxRPG6.png" class="image" />
                 <p>An incremental game where players defeat monsters to level up and become stronger.</p>
                 <a href="https://www.roblox.com/games/107319020151525/BloxRPG-Alpha" target="_blank">Play BloxRPG</a>
             </div>
 
             <div class="project" data-aos="fade-right">
                 <h3>GUESS THE LOGO!</h3>
-                <img src="images/guesslogo1.png" class="image"/>
-                <img src="images/guesslogo2.png" class="image"/>
+                <img src="images/guesslogo1.png" class="image" />
+                <img src="images/guesslogo2.png" class="image" />
                 <p>A fun Roblox game where players guess brand logos to progress through levels.</p>
                 <a href="https://www.roblox.com/games/137914350299318/XMAS-GUESS-THE-LOGO" target="_blank">Play GUESS THE LOGO!</a>
                 <p><br><br></p>
@@ -306,169 +294,52 @@
             <h3>Discord Development</h3>
 
             <p>As someone who is always at their computer, I like to use apps like Discord to
-              keep in touch with my friends, stay social, and boost my productivity.</p>
+                keep in touch with my friends, stay social, and boost my productivity.</p>
 
-            <img src="images/discordprofile.png" class="image"/>
+            <img src="images/discordprofile.png" class="image" />
 
             <div class="project" data-aos="fade-left">
-              <h3>v2bron</h3>
-              <img src="images/v2bron1.png" class="image"/>
-              <img src="images/v2bron2.png" class="image"/>
-              <p>Personal use Discord bot with automation, moderation, and entertainment commands.</p>
-              <a href="https://github.com/v2dom/v2bron" target="_blank">Visit v2bron on GitHub</a>
+                <h3>v2bron</h3>
+                <img src="images/v2bron1.png" class="image" />
+                <img src="images/v2bron2.png" class="image" />
+                <p>Personal use Discord bot with automation, moderation, and entertainment commands.</p>
+                <a href="https://github.com/v2dom/v2bron" target="_blank">Visit v2bron on GitHub</a>
             </div>
 
             <div class="project" data-aos="fade-right">
-              <h3>Custom Discord Overlay</h3>
-              <p>Lightweight overlay that shows active speakers and participants over a secondary monitor.</p>
-              <p><br><br></p>
+                <h3>Custom Discord Overlay</h3>
+                <p>Lightweight overlay that shows active speakers and participants over a secondary monitor.</p>
+                <p><br><br></p>
             </div>
 
             <div class="project" data-aos="fade-left">
-              <h3>Music Controller Overlay</h3>
-              <img src="images/audioplayer.png" class="image"/>
-              <p>Personal use Rainmeter skin with YT/Spotify integration custom made for my touchscreen monitor.</p>
-              <a href="https://github.com/v2dom/audioplayer" target="_blank">Visit Music Controller Overlay on GitHub</a>
+                <h3>Music Controller Overlay</h3>
+                <img src="images/audioplayer.png" class="image" />
+                <p>Personal use Rainmeter skin with YT/Spotify integration custom made for my touchscreen monitor.</p>
+                <a href="https://github.com/v2dom/audioplayer" target="_blank">Visit Music Controller Overlay on GitHub</a>
             </div>
 
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
         <div class="container" data-aos="fade-up">
             <h2>Get in touch with me!</h2>
             <p>📩 Email: <a href="mailto:dominick@v2dom.dev">dominick@v2dom.dev</a></p>
-            <p>🔗 <a href="https://linkedin.com/in/v2dom" target="_blank">LinkedIn</a> | 
-                🔗 <a href="https://www.instagram.com/v2d0m">Instagram</a> | 
-                🔗 <a href="https://www.youtube.com/@v2dom">YouTube</a>  | 
+            <p>🔗 <a href="https://linkedin.com/in/v2dom" target="_blank">LinkedIn</a> |
+                🔗 <a href="https://www.instagram.com/v2d0m">Instagram</a> |
+                🔗 <a href="https://www.youtube.com/@v2dom">YouTube</a> |
                 🔗 <a href="https://app.joinhandshake.com/profiles/43359395">Handshake</a></p>
         </div>
     </section>
     </div>
 
-    <!-- Include AOS.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    
-    <!-- Initialize AOS -->
+
     <script>
         AOS.init();
     </script>
-
-    <!-- Particles.js Script -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        particlesJS("particles-js", 
-        {
-  "particles": {
-    "number": {
-      "value": 202,
-      "density": {
-        "enable": true,
-        "value_area": 800
-      }
-    },
-    "color": {
-      "value": "#27293d"
-    },
-    "shape": {
-      "type": "polygon",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 7
-      },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
-      }
-    },
-    "opacity": {
-      "value": 0.5,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": 1,
-        "opacity_min": 0.1,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 3,
-      "random": true,
-      "anim": {
-        "enable": true,
-        "speed": 17.053621458328248,
-        "size_min": 0.1,
-        "sync": true
-      }
-    },
-    "line_linked": {
-      "enable": false,
-      "distance": 150,
-      "color": "#ffffff",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 3.206824121731046,
-      "direction": "none",
-      "random": false,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
-    }
-  },
-  "interactivity": {
-    "detect_on": "window",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "grab"
-      },
-      "onclick": {
-        "enable": true,
-        "mode": "repulse"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 245,
-        "line_linked": {
-          "opacity": 0.05
-        }
-      },
-      "bubble": {
-        "distance": 1500,
-        "size": 2,
-        "duration": 0.7192807192807193,
-        "opacity": 0.8951048951048951,
-        "speed": 3
-      },
-      "repulse": {
-        "distance": 250,
-        "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
-  },
-  "retina_detect": true
-});
-    </script>
+    
 </body>
+
 </html>
