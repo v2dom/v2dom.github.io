@@ -81,14 +81,21 @@
             box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
         }
 
-        h1, h2, h3 {
+        h2 {
+            color: #ffffff;
+            text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+            font-family: Garamond, serif;
+            font-size: xx-large;
+        }
+
+        h1, h3 {
             color: #ffffff;
             font-family: Garamond, serif;
             font-size: xx-large;
         }
 
         a {
-            color: #27293d;
+            color: #8b7bc7;
             text-decoration: none;
         }
 
@@ -118,8 +125,10 @@
 
         .image-container {
           width: 90%; /* Adjust image width */
-          text-align: right; /* Align image to the right */
-        }     
+          text-align: right; /* Align image to the right by default */
+          display: flex;
+          justify-content: flex-end; /* Push the image to the right */
+        }
 
         .fixed-image {
           width: 1200px;
@@ -134,6 +143,33 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+
+        /* Responsive for small screens (phones) */
+        @media (max-width: 768px) {
+          .container2 {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center content */
+            text-align: center;
+          }
+
+          .image-container {
+            width: 100%; /* Full width on small screens */
+            text-align: center; /* Center image */
+            justify-content: center;
+            margin-top: 10px;
+          }
+
+          .fixed-image {
+            width: 100%; /* Make image responsive */
+            height: auto;
+          }
+
+          .fixed-image img {
+            width: 100%;
+            height: auto;
+          }
         }
 
         .image {
@@ -276,6 +312,8 @@
 
             <div class="project" data-aos="fade-left">
               <h3>v2bron</h3>
+              <img src="images/v2bron1.png" class="image"/>
+              <img src="images/v2bron2.png" class="image"/>
               <p>Personal use Discord bot with automation, moderation, and entertainment commands.</p>
               <a href="https://github.com/v2dom/v2bron" target="_blank">Visit v2bron on GitHub</a>
             </div>
@@ -287,10 +325,10 @@
             </div>
 
             <div class="project" data-aos="fade-left">
-              <h3>Music Player Overlay</h3>
+              <h3>Music Controller Overlay</h3>
               <img src="images/audioplayer.png" class="image"/>
               <p>Personal use Rainmeter skin with YT/Spotify integration custom made for my touchscreen monitor.</p>
-              <a href="https://github.com/v2dom/audioplayer" target="_blank">Visit Music Player Overlay on GitHub</a>
+              <a href="https://github.com/v2dom/audioplayer" target="_blank">Visit Music Controller Overlay on GitHub</a>
             </div>
 
         </div>
