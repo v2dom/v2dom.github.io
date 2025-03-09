@@ -5,10 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dominick Woodward @v2dom</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const originalTitle = "Dominick Woodward @v2dom | ";
+            let title = originalTitle;
+            let currentPos = 0;
+
+            setInterval(() => {
+                document.title = title.substring(currentPos) + title.substring(0, currentPos);
+                currentPos++;
+                if (currentPos === title.length) {
+                    currentPos = 0; // Reset to start over
+                }
+            }, 200); // Adjust speed of scroll (in milliseconds)
+        });
+    </script>
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Geist">
     <style>
+
+        html {
+        --s: 100px; /* control the size */
+        --c1: #050505;
+        --c2: #929292;
+        
+        --_s: calc(2*var(--s)) calc(2*var(--s));
+        --_g: var(--_s) conic-gradient(at 40% 40%,#0000 75%,var(--c1) 0);
+        --_p: var(--_s) conic-gradient(at 20% 20%,#0000 75%,var(--c2) 0);
+        background:
+            calc( .9*var(--s)) calc( .9*var(--s))/var(--_p),
+            calc(-.1*var(--s)) calc(-.1*var(--s))/var(--_p),
+            calc( .7*var(--s)) calc( .7*var(--s))/var(--_g),
+            calc(-.3*var(--s)) calc(-.3*var(--s))/var(--_g),
+            conic-gradient(from 90deg at 20% 20%,var(--c2) 25%,var(--c1) 0) 
+            0 0/var(--s) var(--s);
+        animation: m 3s infinite;
+        }
+        @keyframes m {
+        0% {
+        background-position: 
+            calc( .9*var(--s)) calc( .9*var(--s)),
+            calc(-.1*var(--s)) calc(-.1*var(--s)),
+            calc( .7*var(--s)) calc( .7*var(--s)),
+            calc(-.3*var(--s)) calc(-.3*var(--s)),0 0
+        }
+        25% {
+        background-position: 
+            calc(1.9*var(--s)) calc( .9*var(--s)),
+            calc(-1.1*var(--s)) calc(-.1*var(--s)),
+            calc(1.7*var(--s)) calc( .7*var(--s)),
+            calc(-1.3*var(--s)) calc(-.3*var(--s)),0 0
+        }
+        50% {
+        background-position: 
+            calc(1.9*var(--s)) calc(-.1*var(--s)),
+            calc(-1.1*var(--s)) calc( .9*var(--s)),
+            calc(1.7*var(--s)) calc(-.3*var(--s)),
+            calc(-1.3*var(--s)) calc( .7*var(--s)),0 0
+        }
+        75% {
+        background-position: 
+            calc(2.9*var(--s)) calc(-.1*var(--s)),
+            calc(-2.1*var(--s)) calc( .9*var(--s)),
+            calc(2.7*var(--s)) calc(-.3*var(--s)),
+            calc(-2.3*var(--s)) calc( .7*var(--s)),0 0
+        }
+        100% {
+        background-position: 
+            calc(2.9*var(--s)) calc(-1.1*var(--s)),
+            calc(-2.1*var(--s)) calc(1.9*var(--s)),
+            calc(2.7*var(--s)) calc(-1.3*var(--s)),
+            calc(-2.3*var(--s)) calc(1.7*var(--s)),0 0
+        }
+        }
+
         .header {
             position: fixed;
             top: 0;
@@ -48,10 +119,9 @@
             font-weight: 1000;
             font-size: 24px;
             text-align: center;
-            color: #050505;
+            color: #E6E6E6;
             margin: 0;
             padding: 0;
-            background-color: #E6E6E6;
             background-size: 400% 400%;
             animation: gradientBG 10s ease infinite;
         }
@@ -64,14 +134,14 @@
         .container {
             max-width: 1600px;
             margin: auto;
-            background: #E6E6E6;
+            background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
-            color: #050505;
+            color: #E6E6E6;
             font-family: 'Geist', sans-serif;
             font-weight: 1000;
             font-size: 48px;
@@ -79,21 +149,21 @@
 
         h1,
         h3 {
-            color: #050505;
+            color: #E6E6E6;
             font-family: 'Geist', sans-serif;
             font-weight: 1000;
             font-size: 48px;
         }
 
         h4 {
-            color: #050505;
+            color: #E6E6E6;
             font-family: 'Geist', sans-serif;
             font-weight: 1000;
             font-size: 48px;
         }
 
         .tiny {
-            color: #050505;
+            color: #E6E6E6;
             font-family: 'Geist', sans-serif;
             font-weight: 1000;
             font-size: 16px;
@@ -109,19 +179,32 @@
             margin: 20px 0;
             padding: 15px;
             border-radius: 0px;
-            background: #E6E6E6;
+            background: rgba(0, 0, 0, 0);
         }
 
         .container2 {
             max-width: 1600px;
             margin: auto;
-            background: #E6E6E6;
+            background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
             justify-content: space-between;
+        }
+
+        .container3 {
+            width: 100%;
+            min-height: 100vh; /* Ensures the footer takes at least the full screen height */
+            background: #050505;
+            color: white;
+            display: flex;
+            justify-content: center; /* Optional: center the content horizontally */
+            align-items: center; /* Optional: center the content vertically */
+            padding: 20px;
+            box-sizing: border-box; /* Ensures padding does not affect width */
+            flex-direction: column; /* Allows for stacking content */
         }
 
         .text {
@@ -291,9 +374,6 @@
 
             <h3>Discord Development</h3>
 
-            <p>As someone who is always at their computer, I like to use apps like Discord to
-                keep in touch with my friends, stay social, and boost my productivity.</p>
-
             <img src="images/discordprofile.png" class="image" />
             <p><br><br></p>
 
@@ -323,7 +403,8 @@
     </section>
 
     <section id="contact">
-        <div class="container" data-aos="fade-up">
+        <div class="container3" data-aos="fade-up">
+            <p><br><br><br><br><br><br></p>
             <h2>Get in touch with me!</h2>
             <p>📩 Email: <a href="mailto:dominick@v2dom.dev">dominick@v2dom.dev</a></p>
             <p>🔗 <a href="https://linkedin.com/in/v2dom" target="_blank">LinkedIn</a> |
@@ -331,12 +412,12 @@
                 🔗 <a href="https://www.youtube.com/@v2dom">YouTube</a> |
                 🔗 <a href="https://app.joinhandshake.com/profiles/43359395">Handshake</a></p>
 
-            <p><br><br><br><br><br><br>If you're reading this I want to thank you from the bottom of my heart.<br>
+            <p><br><br><br><br><br><br>If you're reading this I want to thank you from the bottom of my heart.<br><br>
                 Your time is valuable and you chose to check out my website and read through everything I had to say, that means a lot!
             </p>
 
             <div class="tiny">
-                <text><br><br><br><br><br><br> © 2024 Dominick Woodward</text>
+                <text><br><br><br><br>© 2025 Dominick Woodward<br><br></text>
             </div>
 
         </div>
