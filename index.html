@@ -7,18 +7,20 @@
     <title>Dominick Woodward</title>
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://geist-font.vercel.app/font.css">
     <style>
         .header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #170b1b;
+            background-color: #050505;
             text-align: center;
-            font-family: Garamond, serif;
+            font-family: 'Geist', sans-serif;
+            font-weight: 600;
             font-size: 24px;
             font-weight: bold;
-            color: white;
+            color: #E6E6E6;
             padding: 15px 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
@@ -45,20 +47,21 @@
             position: fixed;
             width: 100%;
             height: 100%;
-            background: #170b1b;
+            background: #E6E6E6;
             top: 0;
             left: 0;
             z-index: -1;
         }
 
         body {
-            font-family: Tahoma, serif;
+            font-family: 'Geist', sans-serif;
+            font-weight: 600;
             font-size: large;
             text-align: center;
-            color: #ffffff;
+            color: #050505;
             margin: 0;
             padding: 0;
-            background-color: #170b1b;
+            background-color: #E6E6E6;
             background-size: 400% 400%;
             animation: gradientBG 10s ease infinite;
         }
@@ -71,40 +74,37 @@
         .container {
             max-width: 1000px;
             margin: auto;
-            background: #170b1b;
+            background: #E6E6E6;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
-            color: #ffffff;
+            color: #050505;
             text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
-            font-family: Garamond, serif;
+            font-family: 'Geist', sans-serif;
+            font-weight: 600;
             font-size: xx-large;
         }
 
         h1,
         h3 {
-            color: #ffffff;
-            font-family: Garamond, serif;
+            color: #050505;
+            font-family: 'Geist', sans-serif;
+            font-weight: 600;
             font-size: xx-large;
         }
 
         h4 {
-            color: #ffffff;
-            font-family: Garamond, serif;
+            color: #050505;
+            font-family: 'Geist', sans-serif;
+            font-weight: 600;
             font-size: x-large;
         }
 
-        h5 {
-            color: #ffffff;
-            font-family: Garamond, serif;
-            font-size: larger;
-        }
-
         a {
-            color: #8b7bc7;
+            color: #c9c9c9;
             text-decoration: none;
         }
 
@@ -113,13 +113,13 @@
             margin: 20px 0;
             padding: 15px;
             border-radius: 0px;
-            background: #170b1b;
+            background: #E6E6E6;
         }
 
         .container2 {
             max-width: 1000px;
             margin: auto;
-            background: #170b1b;
+            background: #E6E6E6;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
@@ -191,11 +191,18 @@
     </style>
 </head>
 
-<script src="particlescript.js"></script>
-
 <body>
 
-    <div id="particles-js"></div>
+    <div style="width: 100%; height: 950px; overflow: hidden;">
+        <iframe 
+            src="https://brown-exceptions-513802.framer.app/" 
+            width="100%" 
+            height="100%" 
+            style="border:none;"
+            loading="lazy">
+        </iframe>
+    </div>
+    
 
     <section id="about">
 
@@ -209,38 +216,23 @@
         </div>
         </div>
 
-        <div class="container2" data-aos="fade-up" style="background: var(--main-bg-color); border-radius: var(--border-radius);">
-            <h1>Hi, I'm Dominick Woodward, a Summer 2025 Arizona State University CIS grad.</h1>
-
-            <div class="image-container fixed-image">
-                <img id="randomImage" src="">
-            </div>
-
-
-            <script>
-                const images = [
-                    "image1.png", "image2.png", "image3.png", "image4.png",
-                    "image5.png", "image6.png", "image7.png", "image8.png"
-                ];
-
-                const randomIndex = Math.floor(Math.random() * images.length);
-                const randomImage = images[randomIndex];
-
-                document.getElementById("randomImage").src = "images/" + randomImage;
-
-                window.addEventListener("scroll", function() {
-                    const header = document.getElementById("header");
-                    const imageContainer = document.querySelector(".image-container");
-                    const imageBottom = imageContainer.offsetTop + imageContainer.offsetHeight;
-
-                    if (window.scrollY > imageBottom) {
-                        header.classList.add("visible");
-                    } else {
-                        header.classList.remove("visible");
-                    }
-                });
-            </script>
-        </div>
+        <script>
+            window.addEventListener('scroll', () => {
+                const iframe = document.querySelector('iframe');
+                const header = document.querySelector('.header'); // Adjust selector if needed
+        
+                if (!iframe || !header) return; // Safety check in case elements aren't found
+        
+                const iframeBottom = iframe.offsetTop + iframe.offsetHeight;
+        
+                if (window.scrollY > iframeBottom) {
+                    header.classList.add("visible");
+                } else {
+                    header.classList.remove("visible");
+                }
+            });
+        </script>
+        
 
         <div class="content">
             <div class="container" data-aos="fade-up" ;>
