@@ -26,58 +26,7 @@
     <style>
 
         html {
-        --s: 100px; /* control the size */
-        --c1: #050505;
-        --c2: #929292;
-        
-        --_s: calc(2*var(--s)) calc(2*var(--s));
-        --_g: var(--_s) conic-gradient(at 40% 40%,#0000 75%,var(--c1) 0);
-        --_p: var(--_s) conic-gradient(at 20% 20%,#0000 75%,var(--c2) 0);
-        background:
-            calc( .9*var(--s)) calc( .9*var(--s))/var(--_p),
-            calc(-.1*var(--s)) calc(-.1*var(--s))/var(--_p),
-            calc( .7*var(--s)) calc( .7*var(--s))/var(--_g),
-            calc(-.3*var(--s)) calc(-.3*var(--s))/var(--_g),
-            conic-gradient(from 90deg at 20% 20%,var(--c2) 25%,var(--c1) 0) 
-            0 0/var(--s) var(--s);
-        animation: m 3s infinite;
-        }
-        @keyframes m {
-        0% {
-        background-position: 
-            calc( .9*var(--s)) calc( .9*var(--s)),
-            calc(-.1*var(--s)) calc(-.1*var(--s)),
-            calc( .7*var(--s)) calc( .7*var(--s)),
-            calc(-.3*var(--s)) calc(-.3*var(--s)),0 0
-        }
-        25% {
-        background-position: 
-            calc(1.9*var(--s)) calc( .9*var(--s)),
-            calc(-1.1*var(--s)) calc(-.1*var(--s)),
-            calc(1.7*var(--s)) calc( .7*var(--s)),
-            calc(-1.3*var(--s)) calc(-.3*var(--s)),0 0
-        }
-        50% {
-        background-position: 
-            calc(1.9*var(--s)) calc(-.1*var(--s)),
-            calc(-1.1*var(--s)) calc( .9*var(--s)),
-            calc(1.7*var(--s)) calc(-.3*var(--s)),
-            calc(-1.3*var(--s)) calc( .7*var(--s)),0 0
-        }
-        75% {
-        background-position: 
-            calc(2.9*var(--s)) calc(-.1*var(--s)),
-            calc(-2.1*var(--s)) calc( .9*var(--s)),
-            calc(2.7*var(--s)) calc(-.3*var(--s)),
-            calc(-2.3*var(--s)) calc( .7*var(--s)),0 0
-        }
-        100% {
-        background-position: 
-            calc(2.9*var(--s)) calc(-1.1*var(--s)),
-            calc(-2.1*var(--s)) calc(1.9*var(--s)),
-            calc(2.7*var(--s)) calc(-1.3*var(--s)),
-            calc(-2.3*var(--s)) calc(1.7*var(--s)),0 0
-        }
+        background: #050505
         }
 
         .header {
@@ -134,7 +83,7 @@
         .container {
             max-width: 1600px;
             margin: auto;
-            background: rgba(0, 0, 0, 0.8);
+            background: 050505;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
@@ -179,16 +128,16 @@
             margin: 20px 0;
             padding: 15px;
             border-radius: 0px;
-            background: rgba(0, 0, 0, 0);
+            background: #050505;
         }
 
         .container2 {
             max-width: 1600px;
             margin: auto;
-            background: rgba(0, 0, 0, 0.8);
+            background: #050505;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 0px rgba(0, 0, 0);
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -347,24 +296,21 @@
             <h2>Projects<br><br></h2>
 
             <div class="project" data-aos="fade-left">
-                <h3>Real Estate Web Scraper</h3>
+                <a href="https://github.com/v2dom/realestate" target="_blank"><h3>Real Estate Web Scraper</h3></a>
                 <p>A web scraping tool that gathers real estate listings and visualizes trends.</p>
-                <a href="https://github.com/v2dom/realestate" target="_blank">Visit Real Estate Web Scraper</a>
                 <p><br><br><br><br></p>
             </div>
 
             <div class="project" data-aos="fade-right">
-                <h3>Clarify</h3>
+                <a href="https://v2dom.dev/clarify" target="_blank"><h3>Clarify</h3></a>
                 <img src="images/clarify.png" class="image" />
                 <p>A tool that allows the visualization of Spotify listening habits.</p>
-                <a href="https://v2dom.dev/clarify" target="_blank">Visit Clarify</a>
             </div>
 
             <div class="project" data-aos="fade-left">
-                <h3>Study Hub</h3>
+                <a href="https://v2dom.dev/study/" target="_blank"><h3>Study Hub</h3></a>
                 <img src="images/study.png" class="image" />
                 <p>A tailored interface designed to help the average engineering student get homework done.</p>
-                <a href="https://v2dom.dev/study/" target="_blank">Visit Study Hub</a>
                 <p><br><br><br><br></p>
             </div>
 
@@ -373,25 +319,22 @@
                 textures. Generated 33,000 Robux (around $115 USD) in revenue.</p>
 
             <div class="project" data-aos="fade-right">
-                <h3>Super Clicker</h3>
+                <a href="https://www.roblox.com/games/81837700508336/Super-Clicker" target="_blank"><h3>Super Clicker</h3></a>
                 <img src="images/clicker1.png" class="image" />
                 <p>An incremental game where players earn money by clicking and upgrading pets for multipliers.</p>
-                <a href="https://www.roblox.com/games/81837700508336/Super-Clicker" target="_blank">Play Super Clicker</a>
             </div>
 
             <div class="project" data-aos="fade-left">
-                <h3>BloxRPG</h3>
+                <a href="https://www.roblox.com/games/107319020151525/BloxRPG-Alpha" target="_blank"><h3>BloxRPG</h3></a>
                 <img src="images/BloxRPG2.png" class="image" />
                 <img src="images/BloxRPG6.png" class="image" />
                 <p>An incremental game where players defeat monsters to level up and become stronger.</p>
-                <a href="https://www.roblox.com/games/107319020151525/BloxRPG-Alpha" target="_blank">Play BloxRPG</a>
             </div>
 
             <div class="project" data-aos="fade-right">
-                <h3>GUESS THE LOGO!</h3>
+                <a href="https://www.roblox.com/games/137914350299318/XMAS-GUESS-THE-LOGO" target="_blank"><h3>GUESS THE LOGO!</h3></a>
                 <img src="images/guesslogo1.png" class="image" />
                 <p>A game where players guess brand logos to progress through levels.</p>
-                <a href="https://www.roblox.com/games/137914350299318/XMAS-GUESS-THE-LOGO" target="_blank">Play GUESS THE LOGO!</a>
                 <p><br><br></p>
             </div>
 
@@ -401,26 +344,23 @@
             <p><br><br></p>
 
             <div class="project" data-aos="fade-left">
-                <h3>v2bron</h3>
+                <a href="https://github.com/v2dom/v2bron" target="_blank"><h3>v2bron</h3></a>
                 <img src="images/v2bron1.png" class="image" />
                 <img src="images/v2bron2.png" class="image" />
                 <p>Personal use Discord bot with automation, moderation, and entertainment commands.</p>
-                <a href="https://github.com/v2dom/v2bron" target="_blank">Visit v2bron</a>
             </div>
 
             <div class="project" data-aos="fade-right">
-                <h3>Custom Discord Overlay</h3>
+                <a href="https://github.com/v2dom/discordoverlay" target="_blank"><h3>Custom Discord Overlay</h3></a>
                 <img src="images/tinydiscordoverlay.png" class="image" />
                 <p>Lightweight Rainmeter skin that emulates Discord overlay—shows active speakers and participants to a secondary monitor.</p>
-                <a href="https://github.com/v2dom/discordoverlay" target="_blank">Visit Custom Discord Overlay</a>
                 <p><br><br></p>
             </div>
 
             <div class="project" data-aos="fade-left">
-                <h3>Music Controller Overlay</h3>
+                <a href="https://github.com/v2dom/audioplayer" target="_blank"><h3>Music Controller Overlay</h3></a>
                 <img src="images/audioplayer.png" class="image" />
                 <p>Personal use Rainmeter skin with YT/Spotify integration custom made for my touchscreen monitor.</p>
-                <a href="https://github.com/v2dom/audioplayer" target="_blank">Visit Music Controller Overlay</a>
             </div>
 
         </div>
@@ -436,8 +376,7 @@
                 🔗 <a href="https://www.youtube.com/@v2dom">YouTube</a> |
                 🔗 <a href="https://app.joinhandshake.com/profiles/43359395">Handshake</a></p>
 
-            <p><br><br><br><br><br><br>If you're reading this I want to thank you from the bottom of my heart.<br><br>
-                Your time is valuable and you chose to check out my website and read through everything I had to say, that means a lot!
+
             </p>
 
             <div class="tiny">
