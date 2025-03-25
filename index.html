@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,270 +13,50 @@
             setInterval(() => {
                 document.title = title.substring(currentPos) + title.substring(0, currentPos);
                 currentPos++;
-                if (currentPos === title.length) {
-                    currentPos = 0; // Reset to start over
-                }
-            }, 200); // Adjust speed of scroll (in milliseconds)
+                if (currentPos === title.length) currentPos = 0;
+            }, 200);
         });
     </script>
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Geist">
-    <style>
-
-        html {
-        background: #050505
-        }
-
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #050505;
-            text-align: center;
-            font-family: 'Geist', sans-serif;
-            font-weight: 1000;
-            font-size: 24px;
-            font-weight: bold;
-            color: #E6E6E6;
-            padding: 15px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            opacity: 0;
-            transform: translateY(-100%);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-
-        .header.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .content {
-            margin-top: 70px;
-            text-align: center;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Geist', sans-serif;
-            font-weight: 1000;
-            font-size: 24px;
-            text-align: center;
-            color: #E6E6E6;
-            margin: 0;
-            padding: 0;
-            background-size: 400% 400%;
-            animation: gradientBG 10s ease infinite;
-        }
-
-        section {
-            padding: 50px 20px;
-            margin: 50px 0;
-        }
-
-        .container {
-            max-width: 1600px;
-            margin: auto;
-            background: 050505;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #E6E6E6;
-            font-family: 'Geist', sans-serif;
-            font-weight: 1000;
-            font-size: 48px;
-        }
-
-        h1,
-        h3 {
-            color: #E6E6E6;
-            font-family: 'Geist', sans-serif;
-            font-weight: 1000;
-            font-size: 48px;
-        }
-
-        h4 {
-            color: #E6E6E6;
-            font-family: 'Geist', sans-serif;
-            font-weight: 1000;
-            font-size: 48px;
-        }
-
-        .tiny {
-            color: #E6E6E6;
-            font-family: 'Geist', sans-serif;
-            font-weight: 1000;
-            font-size: 16px;
-        }
-
-        a {
-            color: #737ee2;
-            text-decoration: none;
-        }
-
-
-        .project {
-            margin: 20px 0;
-            padding: 15px;
-            border-radius: 0px;
-            background: #050505;
-        }
-
-        .container2 {
-            max-width: 1600px;
-            margin: auto;
-            background: #050505;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 0px rgba(0, 0, 0);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .container3 {
-            width: 100%;
-            min-height: 100vh; /* Ensures the footer takes at least the full screen height */
-            background: #050505;
-            color: white;
-            display: flex;
-            justify-content: center; /* Optional: center the content horizontally */
-            align-items: center; /* Optional: center the content vertically */
-            padding: 20px;
-            box-sizing: border-box; /* Ensures padding does not affect width */
-            flex-direction: column; /* Allows for stacking content */
-        }
-
-        .text {
-            width: 100%;
-            color: var(--text-color);
-        }
-
-        .image-container {
-            width: 90%;
-            text-align: right;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .fixed-image {
-            width: 1200px;
-            height: 700px;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .fixed-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        @media (max-width: 768px) {
-            .container2 {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .image-container {
-                width: 100%;
-                text-align: center;
-                justify-content: center;
-                margin-top: 10px;
-            }
-
-            .fixed-image {
-                width: 100%;
-                height: auto;
-            }
-
-            .fixed-image img {
-                width: 100%;
-                height: auto;
-            }
-        }
-
-        .image {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
     <div style="width: 100%; height: 950px; overflow: hidden;">
-        <iframe 
-            src="https://brown-exceptions-513802.framer.app/" 
-            width="100%" 
-            height="100%" 
-            style="border:none;"
-            loading="lazy">
-        </iframe>
+        <iframe src="https://brown-exceptions-513802.framer.app/" width="100%" height="100%" style="border:none" loading="lazy"></iframe>
     </div>
-    
 
     <section id="about">
-
-      <div class="header" id="header">
-        <div class="name">Dominick Woodward</div>
-        <div class="nav-links">
-            <a href="#about">About</a> | 
-            <a href="#resume">Resume</a> | 
-            <a href="#projects">Projects</a> | 
-            <a href="#contact">Contact</a>
-        </div>
+        <div class="header" id="header">
+            <div class="name">Dominick Woodward</div>
+            <div class="nav-links">
+                <a href="#about">About</a> | 
+                <a href="#resume">Resume</a> | 
+                <a href="#projects">Projects</a> | 
+                <a href="#contact">Contact</a>
+            </div>
         </div>
 
         <script>
             window.addEventListener('scroll', () => {
                 const iframe = document.querySelector('iframe');
                 const header = document.querySelector('.header');
-        
                 if (!iframe || !header) return;
-        
                 const iframeBottom = iframe.offsetTop + iframe.offsetHeight;
-        
-                if (window.scrollY > iframeBottom) {
-                    header.classList.add("visible");
-                } else {
-                    header.classList.remove("visible");
-                }
+                window.scrollY > iframeBottom ? header.classList.add("visible") : header.classList.remove("visible");
             });
         </script>
-        
 
         <div class="content">
-            <div class="container" data-aos="fade-up" ;>
-                <p>Thank you for visiting my personal site! I'm a hard-working and curious individual based in the greater
-                    Phoenix area exploring the exciting world of technology. Through my time at Arizona State University, I
-                    have experience with Java, SQL, Excel, and JavaScript; and I enjoy experimenting with tools like Canva,
-                    Photoshop, and Premiere Pro. I like to use Python on my personal projects. While I’m still learning, I’m
-                    eager to improve and take on challenges.<br><br>
+            <div class="container" data-aos="fade-up">
+                <p>Thank you for visiting my personal site! I'm a hard-working and curious individual based in the greater Phoenix area exploring the exciting world of technology. Through my time at Arizona State University, I have experience with Java, SQL, Excel, and JavaScript; and I enjoy experimenting with tools like Canva, Photoshop, and Premiere Pro. I like to use Python on my personal projects. While I'm still learning, I'm eager to improve and take on challenges.<br><br>
 
-                    Outside of tech, I’m passionate about staying active with weightlifting, yoga, and sports. I also love brain 
-                    teasers, listening to music, philosophy and ethics, video essays and documentaries, and exploring creative 
-                    outlets like digital art. I'm big into video games, especially shooters.<br><br>
+                Outside of tech, I'm passionate about staying active with weightlifting, yoga, and sports. I also love brain teasers, listening to music, philosophy and ethics, video essays and documentaries, and exploring creative outlets like digital art. I'm big into video games, especially shooters.<br><br>
 
-                    I’m especially intrigued by topics like front-end, AI, cybersecurity, and product management, and I look
-                    forward to growing my skills in these areas. I’m dedicated to putting in the effort to achieve my goals.
-                    Feel free to check my social media links and connect with me on LinkedIn!</p>
+                I'm especially intrigued by topics like front-end, AI, cybersecurity, and product management, and I look forward to growing my skills in these areas. I'm dedicated to putting in the effort to achieve my goals. Feel free to check my social media links and connect with me on LinkedIn!</p>
             </div>
+        </div>
     </section>
 
     <section id="resume">
@@ -296,74 +75,78 @@
 
             <div class="project" data-aos="fade-left">
                 <a href="https://github.com/v2dom/realestate" target="_blank"><h3>Real Estate Web Scraper</h3></a>
-                <img src="images/scraper.png" class="image" />
+                <img src="images/scraper.png" class="image">
                 <p>A web scraping tool that gathers real estate listings and visualizes trends.</p>
-                <p><br><br><br><br></p>
             </div>
 
             <div class="project" data-aos="fade-right">
                 <a href="https://v2dom.dev/clarify" target="_blank"><h3>Clarify</h3></a>
-                <img src="images/clarify.png" class="image" />
+                <img src="images/clarify.png" class="image">
                 <p>A tool that allows the visualization of Spotify listening habits.</p>
             </div>
 
             <div class="project" data-aos="fade-left">
                 <a href="https://v2dom.dev/study/" target="_blank"><h3>Study Hub</h3></a>
-                <img src="images/study.png" class="image" />
+                <img src="images/study.png" class="image">
                 <p>A tailored interface designed to help the average engineering student get homework done.</p>
                 <p><br><br><br><br></p>
             </div>
 
             <h3>Roblox Game Development</h3>
-            <p>I used LUA and Blender to code logic and create
-                textures. Generated 33,000 Robux (around $115 USD) in revenue.</p>
+            <p>I used LUA and Blender to code logic and create textures. Generated 33,000 Robux (around $115 USD) in revenue.</p>
+            <p><br><br></p>
 
             <div class="project" data-aos="fade-right">
-                <a href="https://www.roblox.com/games/81837700508336/Super-Clicker" target="_blank"><h3>Super Clicker</h3></a>
-                <img src="images/clicker1.png" class="image" />
-                <p>An incremental game where players earn money by clicking and upgrading pets for multipliers.</p>
+                <a href="https://www.roblox.com/games/79974059203827/Freaky-Prison-Line-Simulator" target="_blank"><h3>Prison Line Simulator</h3></a>
+                <img src="images/prisonline.png" class="image">
+                <p>Comedy waiting line game with an interesting twist. 4.9+ million visits by players.<br>
+                Frosty Owl Games contracted me to do QA and implement anti-cheat measures to ensure a fun experience for all.</p>
             </div>
 
             <div class="project" data-aos="fade-left">
-                <a href="https://www.roblox.com/games/107319020151525/BloxRPG-Alpha" target="_blank"><h3>BloxRPG</h3></a>
-                <img src="images/BloxRPG2.png" class="image" />
-                <img src="images/BloxRPG6.png" class="image" />
-                <p>An incremental game where players defeat monsters to level up and become stronger.</p>
+                <a href="https://www.roblox.com/games/81837700508336/Super-Clicker" target="_blank"><h3>Super Clicker</h3></a>
+                <img src="images/clicker1.png" class="image">
+                <p>An incremental game where players earn money by clicking and upgrading pets for multipliers.</p>
             </div>
 
             <div class="project" data-aos="fade-right">
+                <a href="https://www.roblox.com/games/107319020151525/BloxRPG-Alpha" target="_blank"><h3>BloxRPG</h3></a>
+                <img src="images/BloxRPG2.png" class="image">
+                <img src="images/BloxRPG6.png" class="image">
+                <p>An incremental game where players defeat monsters to level up and become stronger.</p>
+            </div>
+
+            <div class="project" data-aos="fade-left">
                 <a href="https://www.roblox.com/games/137914350299318/XMAS-GUESS-THE-LOGO" target="_blank"><h3>GUESS THE LOGO!</h3></a>
-                <img src="images/guesslogo1.png" class="image" />
+                <img src="images/guesslogo1.png" class="image">
                 <p>A game where players guess brand logos to progress through levels.</p>
-                <p><br><br></p>
+                <p><br><br><br><br></p>
             </div>
 
             <h3>Discord Development</h3>
-
-            <img src="images/discordprofile.png" class="image" />
+            <img src="images/discordprofile.png" class="image">
             <p><br><br></p>
 
             <div class="project" data-aos="fade-left">
                 <a href="https://github.com/v2dom/v2bron" target="_blank"><h3>v2bron</h3></a>
-                <img src="images/v2bron1.png" class="image" />
-                <img src="images/v2bron2.png" class="image" />
+                <img src="images/v2bron1.png" class="image">
+                <img src="images/v2bron2.png" class="image">
                 <p>Personal use Discord bot with automation, moderation, and entertainment commands.</p>
             </div>
 
             <div class="project" data-aos="fade-right">
                 <a href="https://github.com/v2dom/discord" target="_blank"><h3>Custom Discord Overlay</h3></a>
-                <img src="images/tinydiscordoverlay.png" class="image" />
-                <img src="images/overlay2.png" class="image" />
+                <img src="images/tinydiscordoverlay.png" class="image">
+                <img src="images/overlay2.png" class="image">
                 <p>Lightweight Electron app that shows active speakers and participants to a secondary monitor.</p>
-                <p><br><br></p>
+                <p></p>
             </div>
 
             <div class="project" data-aos="fade-left">
                 <a href="https://github.com/v2dom/audioplayer" target="_blank"><h3>Music Controller Overlay</h3></a>
-                <img src="images/audioplayer.png" class="image" />
+                <img src="images/audioplayer.png" class="image">
                 <p>Personal use Rainmeter skin with YT/Spotify integration custom made for my touchscreen monitor.</p>
             </div>
-
         </div>
     </section>
 
@@ -372,28 +155,81 @@
             <p><br><br><br><br><br><br></p>
             <h2>Get in touch with me!</h2>
             <p>📩 Email: <a href="mailto:dominick@v2dom.dev">dominick@v2dom.dev</a></p>
-            <p>🔗 <a href="https://linkedin.com/in/v2dom" target="_blank">LinkedIn</a> |
-                🔗 <a href="https://www.instagram.com/v2d0m">Instagram</a> |
-                🔗 <a href="https://www.youtube.com/@v2dom">YouTube</a> |
-                🔗 <a href="https://app.joinhandshake.com/profiles/43359395">Handshake</a></p>
-
-
-            </p>
+            <p><a href="https://linkedin.com/in/v2dom" target="_blank">LinkedIn</a> | 
+            <a href="https://www.instagram.com/v2d0m">Instagram</a> | 
+            <a href="https://www.youtube.com/@v2dom">YouTube</a> | 
+            <a href="https://www.github.com/v2dom">GitHub</a> | 
+            <a href="https://app.joinhandshake.com/profiles/43359395">Handshake</a></p>
 
             <div class="tiny">
                 <text><br><br><br><br>© 2025 Dominick Woodward<br><br></text>
             </div>
-
         </div>
     </section>
-    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>AOS.init();</script>
 
     <script>
-        AOS.init();
+        function createShootingStar() {
+            const star = document.createElement('div');
+            star.className = 'shooting-star';
+            
+            const startX = -10;
+            const startY = Math.random() * window.innerHeight;
+            star.style.left = `${startX}px`;
+            star.style.top = `${startY}px`;
+            
+            const angle = 15 + Math.random() * 60;
+            const radians = angle * (Math.PI / 180);
+            
+            const duration = 0.8 + Math.random() * 1.7;
+            
+            const brightness = 0.7 + Math.random() * 0.5;
+            star.style.opacity = brightness;
+            
+            document.body.appendChild(star);
+            
+            const animation = star.animate([
+                { 
+                    opacity: 0,
+                    transform: `translateX(0) translateY(0) rotate(${angle}deg)`
+                },
+                { 
+                    opacity: brightness,
+                    transform: `translateX(${window.innerWidth * 0.4}px) translateY(${Math.tan(radians) * window.innerWidth * 0.4}px) rotate(${angle}deg)`,
+                    offset: 0.4
+                },
+                { 
+                    opacity: 0,
+                    transform: `translateX(${window.innerWidth * 0.8}px) translateY(${Math.tan(radians) * window.innerWidth * 0.8}px) rotate(${angle}deg)`
+                }
+            ], {
+                duration: duration * 1000,
+                easing: 'cubic-bezier(0.1, 0.8, 0.2, 1)'
+            });
+            
+            animation.onfinish = () => {
+                star.remove();
+            };
+        }
+        
+        function startShootingStars() {
+            const starCount = 4 + Math.floor(Math.random() * 15);
+            for (let i = 0; i < starCount; i++) {
+                setTimeout(createShootingStar, i * 300);
+            }
+            
+            const nextDelay = 1000 + Math.random() * 3000;
+            setTimeout(startShootingStars, nextDelay);
+        }
+        
+        setTimeout(startShootingStars, 800);
+        
+        setTimeout(() => {
+            createShootingStar();
+            setTimeout(createShootingStar, 400);
+        }, 200);
     </script>
-    
 </body>
-
 </html>
