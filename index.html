@@ -10,6 +10,7 @@
             let title = originalTitle;
             let currentPos = 0;
 
+
             setInterval(() => {
                 document.title = title.substring(currentPos) + title.substring(0, currentPos);
                 currentPos++;
@@ -19,24 +20,29 @@
     </script>
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/iosevka@5.0.0/latin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.0.1/latin.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 
 <body>
     <div style="width: 100%; height: 950px; overflow: hidden;">
         <iframe src="https://brown-exceptions-513802.framer.app/" width="100%" height="100%" style="border:none" loading="lazy"></iframe>
     </div>
 
+
     <section id="about">
         <div class="header" id="header">
             <div class="name">Dominick Woodward</div>
             <div class="nav-links">
-                <a href="#about">About</a> | 
-                <a href="#resume">Resume</a> | 
-                <a href="#projects">Projects</a> | 
+                <a href="#about">About</a> |
+                <a href="#resume">Resume</a> |
+                <a href="#projects">Projects</a> |
                 <a href="#contact">Contact</a>
             </div>
         </div>
+
 
         <script>
             window.addEventListener('scroll', () => {
@@ -48,16 +54,55 @@
             });
         </script>
 
+
         <div class="content">
             <div class="container" data-aos="fade-up">
-                <p>Thank you for visiting my personal site! I'm a hard-working and curious individual based in the greater Phoenix area exploring the exciting world of technology. Through my time at Arizona State University, I have experience with Java, SQL, Excel, and JavaScript; and I enjoy experimenting with tools like Canva, Photoshop, and Premiere Pro. I like to use Python on my personal projects. While I'm still learning, I'm eager to improve and take on challenges.<br><br>
+
+
+                <div class="tech-stack">
+                    <div class="stack-grid">
+                        <div class="stack-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                        </div>
+                        <div class="stack-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                        </div>
+                        <div class="stack-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                        </div>
+                        <div class="stack-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                        </div>
+                        <div class="stack-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
+                        </div>
+                        <div class="stack-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop">
+                        </div>
+                        <div class="stack-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg" alt="Premiere">
+                        </div>
+                        <div class="stack-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode">
+                        </div>
+                        <div class="stack-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows11/windows11-original.svg" alt="Windows 11">
+                        </div>
+                    </div>
+                </div>
+
+
+                <p>Thank you for visiting my personal site! I'm a hard-working and curious individual based in the greater Phoenix area exploring the exciting world of technology. Through my time at Arizona State University, I have experience with Java, SQL, Excel, and JavaScript; and I enjoy experimenting with tools like Canva, Photoshop, and Premiere Pro. I like to use Python and HTML on my personal projects. While I'm still learning, I'm eager to improve and take on challenges.<br><br>
+
 
                 Outside of tech, I'm passionate about staying active with weightlifting, yoga, and sports. I also love brain teasers, listening to music, philosophy and ethics, video essays and documentaries, and exploring creative outlets like digital art. I'm big into video games, especially shooters.<br><br>
+
 
                 I'm especially intrigued by topics like front-end, AI, cybersecurity, and product management, and I look forward to growing my skills in these areas. I'm dedicated to putting in the effort to achieve my goals. Feel free to check my social media links and connect with me on LinkedIn!</p>
             </div>
         </div>
     </section>
+
 
     <section id="resume">
         <div class="container" data-aos="fade-up">
@@ -69,9 +114,11 @@
         </div>
     </section>
 
+
     <section id="projects">
         <div class="container" data-aos="fade-up">
             <h2>Projects<br><br></h2>
+
 
             <div class="project" data-aos="fade-left">
                 <a href="https://github.com/v2dom/realestate" target="_blank"><h3>Real Estate Web Scraper</h3></a>
@@ -79,11 +126,13 @@
                 <p>A web scraping tool that gathers real estate listings and visualizes trends.</p>
             </div>
 
+
             <div class="project" data-aos="fade-right">
                 <a href="https://v2dom.dev/clarify" target="_blank"><h3>Clarify</h3></a>
                 <img src="images/clarify.png" class="image">
                 <p>A tool that allows the visualization of Spotify listening habits.</p>
             </div>
+
 
             <div class="project" data-aos="fade-left">
                 <a href="https://v2dom.dev/study/" target="_blank"><h3>Study Hub</h3></a>
@@ -92,9 +141,11 @@
                 <p><br><br><br><br></p>
             </div>
 
+
             <h3>Roblox Game Development</h3>
-            <p>I used LUA and Blender to code logic and create textures. Generated 33,000 Robux (around $115 USD) in revenue.</p>
+            <div class="tiny"><p>Generated 33,000 Robux (around $115 USD) in revenue.</p></div>
             <p><br><br></p>
+
 
             <div class="project" data-aos="fade-right">
                 <a href="https://www.roblox.com/games/79974059203827/Freaky-Prison-Line-Simulator" target="_blank"><h3>Prison Line Simulator</h3></a>
@@ -103,11 +154,13 @@
                 Frosty Owl Games contracted me to do QA and implement anti-cheat measures to ensure a fun experience for all.</p>
             </div>
 
+
             <div class="project" data-aos="fade-left">
                 <a href="https://www.roblox.com/games/81837700508336/Super-Clicker" target="_blank"><h3>Super Clicker</h3></a>
                 <img src="images/clicker1.png" class="image">
                 <p>An incremental game where players earn money by clicking and upgrading pets for multipliers.</p>
             </div>
+
 
             <div class="project" data-aos="fade-right">
                 <a href="https://www.roblox.com/games/107319020151525/BloxRPG-Alpha" target="_blank"><h3>BloxRPG</h3></a>
@@ -116,6 +169,7 @@
                 <p>An incremental game where players defeat monsters to level up and become stronger.</p>
             </div>
 
+
             <div class="project" data-aos="fade-left">
                 <a href="https://www.roblox.com/games/137914350299318/XMAS-GUESS-THE-LOGO" target="_blank"><h3>GUESS THE LOGO!</h3></a>
                 <img src="images/guesslogo1.png" class="image">
@@ -123,9 +177,11 @@
                 <p><br><br><br><br></p>
             </div>
 
+
             <h3>Discord Development</h3>
             <img src="images/discordprofile.png" class="image">
             <p><br><br></p>
+
 
             <div class="project" data-aos="fade-left">
                 <a href="https://github.com/v2dom/v2bron" target="_blank"><h3>v2bron</h3></a>
@@ -133,6 +189,7 @@
                 <img src="images/v2bron2.png" class="image">
                 <p>Personal use Discord bot with automation, moderation, and entertainment commands.</p>
             </div>
+
 
             <div class="project" data-aos="fade-right">
                 <a href="https://github.com/v2dom/discord" target="_blank"><h3>Custom Discord Overlay</h3></a>
@@ -142,6 +199,7 @@
                 <p></p>
             </div>
 
+
             <div class="project" data-aos="fade-left">
                 <a href="https://github.com/v2dom/audioplayer" target="_blank"><h3>Music Controller Overlay</h3></a>
                 <img src="images/audioplayer.png" class="image">
@@ -150,16 +208,18 @@
         </div>
     </section>
 
+
     <section id="contact">
         <div class="container3" data-aos="fade-up">
             <p><br><br><br><br><br><br></p>
             <h2>Get in touch with me!</h2>
             <p>📩 Email: <a href="mailto:dominick@v2dom.dev">dominick@v2dom.dev</a></p>
-            <p><a href="https://linkedin.com/in/v2dom" target="_blank">LinkedIn</a> | 
-            <a href="https://www.instagram.com/v2d0m">Instagram</a> | 
-            <a href="https://www.youtube.com/@v2dom">YouTube</a> | 
-            <a href="https://www.github.com/v2dom">GitHub</a> | 
+            <p><a href="https://linkedin.com/in/v2dom" target="_blank">LinkedIn</a> |
+            <a href="https://www.instagram.com/v2d0m">Instagram</a> |
+            <a href="https://www.youtube.com/@v2dom">YouTube</a> |
+            <a href="https://www.github.com/v2dom">GitHub</a> |
             <a href="https://app.joinhandshake.com/profiles/43359395">Handshake</a></p>
+
 
             <div class="tiny">
                 <text><br><br><br><br>© 2025 Dominick Woodward<br><br></text>
@@ -167,40 +227,42 @@
         </div>
     </section>
 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>AOS.init();</script>
+
 
     <script>
         function createShootingStar() {
             const star = document.createElement('div');
             star.className = 'shooting-star';
-            
+           
             const startX = -10;
             const startY = Math.random() * window.innerHeight;
             star.style.left = `${startX}px`;
             star.style.top = `${startY}px`;
-            
+           
             const angle = 15 + Math.random() * 60;
             const radians = angle * (Math.PI / 180);
-            
+           
             const duration = 0.8 + Math.random() * 1.7;
-            
+           
             const brightness = 0.7 + Math.random() * 0.5;
             star.style.opacity = brightness;
-            
+           
             document.body.appendChild(star);
-            
+           
             const animation = star.animate([
-                { 
+                {
                     opacity: 0,
                     transform: `translateX(0) translateY(0) rotate(${angle}deg)`
                 },
-                { 
+                {
                     opacity: brightness,
                     transform: `translateX(${window.innerWidth * 0.4}px) translateY(${Math.tan(radians) * window.innerWidth * 0.4}px) rotate(${angle}deg)`,
                     offset: 0.4
                 },
-                { 
+                {
                     opacity: 0,
                     transform: `translateX(${window.innerWidth * 0.8}px) translateY(${Math.tan(radians) * window.innerWidth * 0.8}px) rotate(${angle}deg)`
                 }
@@ -208,24 +270,24 @@
                 duration: duration * 1000,
                 easing: 'cubic-bezier(0.1, 0.8, 0.2, 1)'
             });
-            
+           
             animation.onfinish = () => {
                 star.remove();
             };
         }
-        
+       
         function startShootingStars() {
             const starCount = 4 + Math.floor(Math.random() * 15);
             for (let i = 0; i < starCount; i++) {
                 setTimeout(createShootingStar, i * 300);
             }
-            
+           
             const nextDelay = 1000 + Math.random() * 3000;
             setTimeout(startShootingStars, nextDelay);
         }
-        
+       
         setTimeout(startShootingStars, 800);
-        
+       
         setTimeout(() => {
             createShootingStar();
             setTimeout(createShootingStar, 400);
@@ -233,3 +295,4 @@
     </script>
 </body>
 </html>
+

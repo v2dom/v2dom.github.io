@@ -1,11 +1,11 @@
 /* ===== Base Styles ===== */
 html {
-    background: #272D2D;
+    background: #2e3030;
     scroll-behavior: smooth;
   }
   
   body {
-    font-family: 'Courier', serif;
+    font-family: 'Iosevka', monospace;
     font-weight: 400;
     font-size: 24px;
     text-align: center;
@@ -17,23 +17,24 @@ html {
   }
   
   h1, h4 {
-    font-family: 'Courier', serif;
+    font-family: 'Iosevka', monospace;
     font-size: 48px;
   }
 
   h2 {
-    font-family: 'Arial', serif;
+    font-family: 'Iosevka', monospace;
     color: #9199A0;
     font-size: 48px;
   }
 
   h3 {
-    font-family: 'Arial', serif;
+    font-family: 'Iosevka', monospace;
     font-size: 42px;
   }
   
   .tiny {
-    font-family: 'Courier', serif;
+    font-family: 'Iosevka', monospace;
+    color: #fff;
     font-size: 16px;
   }
   
@@ -43,20 +44,76 @@ html {
   }
 
   a:hover {
-    color: #9c66b1;
+    color: #577474;
   }
   
+  .tech-stack {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: rgba(46, 48, 48, 0.2);
+    border-radius: 12px;
+    max-width: 1200px;
+  }
+
+  .tech-stack h3 {
+      font-family: 'Geist Sans', sans-serif;
+      font-weight: 600;
+      color: #9199A0;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 1.5rem;
+  }
+
+  .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 1.5rem;
+      justify-items: center;
+  }
+
+  .stack-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease;
+  }
+
+  .stack-item:hover {
+      transform: translateY(-5px);
+  }
+
+  .stack-item img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 0.5rem;
+      filter: grayscale(20%) brightness(0.9);
+      transition: all 0.3s ease;
+  }
+
+  .stack-item:hover img {
+      filter: grayscale(0%) brightness(1.1);
+  }
+
+  .stack-item span {
+      font-family: 'Geist Sans', sans-serif;
+      font-weight: 500;
+      color: #9199A0;
+      font-size: 0.9rem;
+      text-align: center;
+  }
+
   .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #272D2D;
+    background-color: #2E3030;
     text-align: center;
-    font-family: 'Geist', sans-serif;
+    font-family: 'Geist Sans', sans-serif;
     font-size: 24px;
-    font-weight: 400;
-    color: #61686F;
+    font-weight: 600;
+    line-height: 1.1em;
+    color: #9199A0;
     padding: 15px 0;
     z-index: 1000;
     opacity: 0;
@@ -146,7 +203,6 @@ html {
     margin: 0 auto;
   }
   
-  /* ===== Shooting Stars Effect ===== */
   .shooting-star {
     position: fixed;
     width: 3px;
@@ -179,7 +235,6 @@ html {
     background: linear-gradient(90deg, #fff 0%, rgba(255,255,255,.7) 100%);
   }
   
-  /* ===== Media Queries ===== */
   @media (max-width: 768px) {
     .container2 {
       flex-direction: column;
@@ -205,7 +260,6 @@ html {
     }
   }
   
-  /* ===== Animations ===== */
   @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
