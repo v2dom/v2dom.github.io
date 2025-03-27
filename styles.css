@@ -54,15 +54,6 @@ html {
     max-width: 750px;
   }
 
-  .tech-stack h3 {
-      font-family: 'Geist Sans', sans-serif;
-      font-weight: 600;
-      color: #9199A0;
-      margin-bottom: 1.5rem;
-      text-align: center;
-      font-size: 1.5rem;
-  }
-
   .stack-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
