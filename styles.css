@@ -54,6 +54,11 @@ html {
     max-width: 750px;
   }
 
+  .tailwind-override * {
+    all: unset;
+    all: revert;
+  }  
+
   .stack-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));

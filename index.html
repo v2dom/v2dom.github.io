@@ -10,7 +10,6 @@
             let title = originalTitle;
             let currentPos = 0;
 
-
             setInterval(() => {
                 document.title = title.substring(currentPos) + title.substring(0, currentPos);
                 currentPos++;
@@ -18,6 +17,7 @@
             }, 200);
         });
     </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/iosevka@5.0.0/latin.css">
@@ -25,12 +25,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-
 <body>
     <div style="width: 100%; height: 950px; overflow: hidden;">
         <iframe src="https://brown-exceptions-513802.framer.app/" width="100%" height="100%" style="border:none" loading="lazy"></iframe>
     </div>
-
 
     <section id="about">
         <div class="header" id="header">
@@ -42,7 +40,6 @@
             </div>
         </div>
 
-
         <script>
             window.addEventListener('scroll', () => {
                 const iframe = document.querySelector('iframe');
@@ -53,62 +50,59 @@
             });
         </script>
 
-
         <div class="content">
             <div class="container" data-aos="fade-up">
-
-
                 <div class="tech-stack">
                     <div class="stack-grid">
                         <div class="stack-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" title="Java">
                         </div>
                         <div class="stack-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" title="Python">
                         </div>
                         <div class="stack-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" title="JavaScript">
                         </div>
                         <div class="stack-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" title="HTML/CSS">
                         </div>
                         <div class="stack-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" title="SQLite">
                         </div>
                         <div class="stack-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" alt="LUA">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" title="Lua">
                         </div>
                         <div class="stack-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" title="Photoshop">
                         </div>
                         <div class="stack-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg" alt="Premiere">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg" title="Premiere">
                         </div>
                         <div class="stack-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" title="VSCode">
                         </div>
                         <div class="stack-item">
-                            <img src="https://www.svgrepo.com/show/354237/pycharm.svg" alt="VSCode">
+                            <img src="https://www.svgrepo.com/show/354237/pycharm.svg" title="PyCharm">
                         </div>
                         <div class="stack-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows11/windows11-original.svg" alt="Windows 11">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows11/windows11-original.svg" title="Windows 11">
                         </div>
                     </div>
                 </div>
 
-
                 <p>Thank you for visiting my personal site! I'm a hard-working and curious individual based in the greater Phoenix area exploring the exciting world of technology. Through my time at Arizona State University, I have experience with Java, SQL, Excel, and JavaScript; and I enjoy experimenting with tools like Canva, Photoshop, and Premiere Pro. I like to use Python and HTML on my personal projects. While I'm still learning, I'm eager to improve and take on challenges.<br><br>
 
-
                 Outside of tech, I'm passionate about staying active with weightlifting, yoga, and sports. I also love brain teasers, listening to music, philosophy and ethics, video essays and documentaries, and exploring creative outlets like digital art. I'm big into video games, especially shooters.<br><br>
-
 
                 I'm especially intrigued by topics like front-end, AI, cybersecurity, and product management, and I look forward to growing my skills in these areas. I'm dedicated to putting in the effort to achieve my goals. Feel free to check my social media links and connect with me on LinkedIn!</p>
             </div>
         </div>
 
+        <br><br><br><br>
+
         <div class="container" data-aos="fade-up">
-            <h2>I'm looking for work opportunities in the tech field! Find out if I'm the right person for you!</h2>
+            <div class="text-5xl font-semibold text-[#9199A0]">I'm looking for work opportunities in the tech field! Find out if I'm the right person for you!</div>
+            <br><br>
             <a href="docs/Dominick Woodward Resume from v2dom.dev.pdf" download>Download a PDF version of my resume!</a>
             <div class="tiny">
                 <p>TL;DR - I'm a well rounded CIS major with strong leadership and interpersonal skills with a desire to solve problems 😃</p>
@@ -116,100 +110,135 @@
         </div>
     </section>
 
-
     <section id="projects">
         <div class="container" data-aos="fade-up">
-            <h2>Projects<br><br></h2>
-
+            <div class="text-6xl font-bold text-[#9199A0]">Projects<br><br></div>
 
             <div class="project" data-aos="fade-right">
-                <a href="https://github.com/v2dom/realestate" target="_blank"><h3>Real Estate Web Scraper</h3></a>
+                <a href="https://github.com/v2dom/realestate" target="_blank"><div class="text-2xl font-bold">Real Estate Web Scraper</div></a>
                 <img src="images/scraper.png" class="image">
                 <p>A web scraping tool that gathers real estate listings and visualizes trends.</p>
             </div>
 
-
             <div class="project" data-aos="fade-left">
-                <a href="https://v2dom.dev/clarify" target="_blank"><h3>Clarify</h3></a>
+                <a href="https://v2dom.dev/clarify" target="_blank"><div class="text-2xl font-bold">Clarify</div></a>
                 <img src="images/clarify.png" class="image">
                 <p>A tool that allows the visualization of Spotify listening habits.<br>
                     Currently in 
                     <a href="https://developer.spotify.com/documentation/web-api/concepts/quota-modes">development mode</a> - I'm looking for testers to provide testimonials!</p>
             </div>
 
+            <div class="project" data-aos="fade-right">
+                <a href="https://github.com/v2dom/audioplayer" target="_blank"><div class="text-2xl font-bold">Music Controller Overlay</div></a>
+                <img src="images/audioplayer.png" class="image">
+                <p>Personal use Rainmeter skin with YT/Spotify integration custom made for my touchscreen monitor.</p>
+            </div>
 
-            <h3>Roblox Game Development</h3>
-            <img src="images/robloxprofile.png" class="image">
+            <br><br><br><br>
+
+            <div class="text-4xl font-bold text-[#9199A0]">Roblox Game Development</div>
+
+            <div class="flex justify-center my-10">
+                <div class="w-[500px] rounded-2xl overflow-hidden shadow-lg bg-[#1e1f22] p-6">
+                    <div class="flex items-center gap-6">
+                        <div class="w-24 h-24 rounded-full border-4 border-[#1e1f22] overflow-hidden shrink-0">
+                            <img src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-B901BE25D7934C4104DBEABF1F56126B-Png/150/150/AvatarHeadshot/Webp/noFilter" alt="Profile" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="text-xl font-bold text-white flex items-center gap-2">
+                                v2dom
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Roblox_Premium_logo.svg/344px-Roblox_Premium_logo.svg.png?20230528063634" class="w-5 h-5 inline-block align-middle" alt="Roblox Premium">
+                            </div>
+                            <p class="text-sm text-gray-400 text-left">@v2dom</p>
+                            <div class="text-sm font-semibold text-white mt-2">
+                                50 Friends  0 Followers  0 Following
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="tiny"><p>Generated 33,000 Robux (around $115 USD) in revenue.</p></div>
             <p><br><br></p>
 
-
-            <div class="project" data-aos="fade-right">
-                <a href="https://www.roblox.com/games/79974059203827/Freaky-Prison-Line-Simulator" target="_blank"><h3>Prison Line Simulator</h3></a>
+            <div class="project" data-aos="fade-left">
+                <a href="https://www.roblox.com/games/79974059203827/Freaky-Prison-Line-Simulator" target="_blank"><div class="text-2xl font-bold">Prison Line Simulator</div></a>
                 <img src="images/prisonline.png" class="image">
                 <p>Comedy waiting line game with an interesting twist. 4.9+ million visits by players.<br>
                 Frosty Owl Games contracted me to do QA and implement anti-cheat measures to ensure a fun experience for all.</p>
             </div>
 
-
-            <div class="project" data-aos="fade-left">
-                <a href="https://www.roblox.com/games/81837700508336/Super-Clicker" target="_blank"><h3>Super Clicker</h3></a>
+            <div class="project" data-aos="fade-right">
+                <a href="https://www.roblox.com/games/81837700508336/Super-Clicker" target="_blank"><div class="text-2xl font-bold">Super Clicker</div></a>
                 <img src="images/clicker1.png" class="image">
                 <p>An incremental game where players earn money by clicking and upgrading pets for multipliers.</p>
             </div>
 
-
-            <div class="project" data-aos="fade-right">
-                <a href="https://www.roblox.com/games/107319020151525/BloxRPG-Alpha" target="_blank"><h3>BloxRPG</h3></a>
+            <div class="project" data-aos="fade-left">
+                <a href="https://www.roblox.com/games/107319020151525/BloxRPG-Alpha" target="_blank"><div class="text-2xl font-bold">BloxRPG</div></a>
                 <img src="images/BloxRPG2.png" class="image">
                 <img src="images/BloxRPG6.png" class="image">
                 <p>An incremental game where players defeat monsters to level up and become stronger.</p>
             </div>
 
-
-            <div class="project" data-aos="fade-left">
-                <a href="https://www.roblox.com/games/137914350299318/XMAS-GUESS-THE-LOGO" target="_blank"><h3>GUESS THE LOGO!</h3></a>
+            <div class="project" data-aos="fade-right">
+                <a href="https://www.roblox.com/games/137914350299318/XMAS-GUESS-THE-LOGO" target="_blank"><div class="text-2xl font-bold">GUESS THE LOGO!</div></a>
                 <img src="images/guesslogo1.png" class="image">
                 <p>A game where players guess brand logos to progress through levels.</p>
                 <p><br><br><br><br></p>
             </div>
 
+            <div class="text-4xl font-bold text-[#9199A0]">Discord Development</div>
 
-            <h3>Discord Development</h3>
-            <img src="images/discordprofile.png" class="image">
+            <div class="flex justify-center my-10">
+                <div class="w-[500px] rounded-2xl overflow-hidden shadow-lg bg-[#1e1f22]">
+                    <div class="relative">
+                        <div class="h-32 bg-[#5e4c76]"></div>
+                        <div class="absolute -bottom-12 left-6">
+                            <div class="w-24 h-24 rounded-full border-4 border-[#1e1f22] overflow-hidden">
+                                <img src="https://lastfm.freetls.fastly.net/i/u/avatar170s/a0db64700178aead025bc8ec92763147.png" alt="Profile" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-16 px-6 pb-6 text-left">
+                        <div class="text-xl font-bold text-white">v2dom</div>
+                        <p class="text-sm text-gray-400">
+                            v2dom • he/him • <span class="bg-blue-600 px-1 rounded text-sm">⚡ DEV</span>
+                        </p>
+
+                        <div class="flex gap-2 mt-3 flex-wrap">
+                            <img src="https://cdn3.emoji.gg/emojis/5591-discord-developer-badge-shimmer.gif" class="w-7 h-6" title="Active Developer">
+                            <img src="https://cdn3.emoji.gg/emojis/1247-discord-bravery.png" class="w-6 h-6" title="HypeSquad Bravery">
+                            <img src="https://cdn3.emoji.gg/emojis/2937-discord-nitro.png" class="w-7 h-6" title="Nitro Subscriber">
+                            <img src="https://cdn3.emoji.gg/emojis/7904-discord-bughunterlv2.png" class="w-6 h-6" title="Bug Hunter">
+                        </div>
+                    </div>
+                </div>
+            </div>
             <p><br><br></p>
 
-
             <div class="project" data-aos="fade-left">
-                <a href="https://github.com/v2dom/v2bron" target="_blank"><h3>v2bron</h3></a>
-                <img src="images/v2bron1.png" class="image">
-                <img src="images/v2bron2.png" class="image">
+                <a href="https://github.com/v2dom/v2bron" target="_blank"><div class="text-2xl font-bold">v2bron</div></a>
+                <img src="images/v2bron1.png" class="mx-auto">
+                <img src="images/v2bron2.png" class="inline-block">
                 <p>Personal use Discord bot with automation, moderation, and entertainment commands.</p>
             </div>
 
-
             <div class="project" data-aos="fade-right">
-                <a href="https://github.com/v2dom/discord" target="_blank"><h3>Custom Discord Overlay</h3></a>
-                <img src="images/tinydiscordoverlay.png" class="image">
+                <a href="https://github.com/v2dom/discord" target="_blank"><div class="text-2xl font-bold">Custom Discord Overlay</div></a>
                 <img src="images/overlay2.png" class="image">
                 <p>Lightweight Electron app that shows active speakers and participants to a secondary monitor.</p>
                 <p></p>
             </div>
-
-
-            <div class="project" data-aos="fade-left">
-                <a href="https://github.com/v2dom/audioplayer" target="_blank"><h3>Music Controller Overlay</h3></a>
-                <img src="images/audioplayer.png" class="image">
-                <p>Personal use Rainmeter skin with YT/Spotify integration custom made for my touchscreen monitor.</p>
-            </div>
         </div>
     </section>
-
 
     <section id="contact">
         <div class="container3" data-aos="fade-up">
             <p><br><br><br><br><br><br></p>
-            <h2>Get in touch with me!</h2>
+            <div class="text-5xl font-bold text-[#9199A0]">Get in touch with me!</div>
+            <br><br>
             <p>📩 Email: <a href="mailto:dominick@v2dom.dev">dominick@v2dom.dev</a></p>
             <p>Check out my social media pages:</p>
 
@@ -236,17 +265,14 @@
                 </div>
             </div>
 
-
             <div class="tiny">
                 <text><br><br><br><br>© 2025 Dominick Woodward<br><br></text>
             </div>
         </div>
     </section>
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>AOS.init();</script>
-
 
     <script>
         function createShootingStar() {
@@ -311,4 +337,3 @@
     </script>
 </body>
 </html>
-
