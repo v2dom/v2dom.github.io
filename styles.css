@@ -51,6 +51,9 @@ html {
     padding: 1.5rem;
     border-radius: 12px;
     max-width: 750px;
+    background: none;
+    backdrop-filter: none;
+    box-shadow: none;
   }
 
   .tailwind-override * {
