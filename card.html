@@ -9,18 +9,33 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/iosevka@5.0.0/latin.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.0.1/latin.css">
   <style>
-    body {
-      background-color: #524835;
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: rgb(48, 30, 47);
       font-family: 'Iosevka', monospace;
-      color: white;
+      overflow: hidden;
+    }
+    .stack-grid a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      color: #c1c3c7;
+      font-size: 0.75rem;
+      text-decoration: none;
+      transition: transform 0.2s ease-in-out;
     }
     .stack-grid img {
       width: 48px;
       height: 48px;
       transition: transform 0.2s ease-in-out;
     }
-    .stack-grid img:hover {
+    .stack-grid a:hover img {
       transform: scale(1.2) translateY(-4px);
+    }
+    .stack-grid a:hover span {
+      transform: scale(1.1);
     }
     .contact a {
       display: flex;
@@ -29,8 +44,8 @@
       transition: transform 0.2s ease-in-out;
     }
     .contact img {
-      width: 96px;
-      height: 96px;
+      width: 40px;
+      height: 40px;
       opacity: 0.8;
       transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
     }
@@ -47,32 +62,94 @@
     .contact a:hover p {
       transform: scale(1.1);
     }
+    .dots {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .dot {
+      position: absolute;
+      width: 0.5em;
+      height: 0.5em;
+      border-radius: 50%;
+      background: hsla(var(--hue), 100%, 50%, 0.15);
+      filter: blur(8px);
+      animation: swirl 60s infinite ease-in-out;
+    }
+    @keyframes swirl {
+      0% {
+        transform: scale(10) translate(0, 0) rotate(0deg);
+      }
+      100% {
+        transform: scale(16) translate(100px, -100px) rotate(360deg);
+      }
+    }
   </style>
 </head>
+<body class="relative flex flex-col items-center justify-center min-h-screen p-6">
+  <div class="dots" aria-hidden="true">
+    <script>
+      const root = document.currentScript.parentElement;
+      for (let i = 0; i < 120; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'dot';
+        dot.style.top = Math.random() * 100 + 'vh';
+        dot.style.left = Math.random() * 100 + 'vw';
+        dot.style.setProperty('--hue', Math.floor(Math.random() * 360));
+        dot.style.animationDuration = (40 + Math.random() * 40) + 's';
+        dot.style.animationDelay = (-Math.random() * 60) + 's';
+        root.appendChild(dot);
+      }
+    </script>
+  </div>
 
-<body class="flex flex-col items-center justify-center min-h-screen p-6">
-  <div class="text-center mb-8">
-    <img src="images/v2dom.png" alt="Dominick Woodward" class="w-20 h-20 mx-auto mb-4 rounded-full border-2 border-white">
-    <h1 class="text-3xl font-bold text-[#9199A0]">Dominick Woodward</h1>
+  <div class="text-center mb-8 z-10">
+    <img src="images/v2dom.png" alt="Dominick Woodward" class="w-40 h-40 mx-auto mb-4 rounded-full border-2 border-white">
+    <h1 class="text-3xl font-bold text-white">Dominick Woodward</h1>
     <p class="text-[#c1c3c7]">@v2dom</p>
   </div>
 
-  <!-- Contact Card Section -->
-  <div class="contact mb-10 text-center mb-8">
-    <a href="/contact.vcf" download>
-      <img src="https://www.svgrepo.com/show/451521/contact-new.svg" title="Save Contact" />
-      <p>Contact Card</p>
+  <div class="flex gap-10 mb-10 text-center z-10">
+    <div class="contact">
+      <a href="/contact.vcf" download>
+        <img src="https://www.svgrepo.com/show/451521/contact-new.svg" title="Save Contact" style="filter: invert(1);" />
+        <p>Contact Card</p>
+      </a>
+    </div>
+    <div class="contact">
+      <a href="https://v2dom.dev" target="_blank">
+        <img src="https://www.svgrepo.com/show/451859/screen-shared.svg" title="Website" style="filter: invert(1); width: 40px; height: 40px;" />
+        <p>Website</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-3 sm:grid-cols-5 gap-6 stack-grid mb-10 z-10">
+    <a href="https://linkedin.com/in/v2dom" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" title="LinkedIn" />
+      <span>LinkedIn</span>
+    </a>
+    <a href="https://instagram.com/v2d0m" target="_blank">
+      <img src="https://www.svgrepo.com/show/13639/instagram.svg" title="Instagram" />
+      <span>Instagram</span>
+    </a>
+    <a href="https://www.github.com/v2dom" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" title="GitHub" />
+      <span>GitHub</span>
+    </a>
+    <a href="https://account.venmo.com/u/dominickwoodward" target="_blank">
+      <img src="https://www.svgrepo.com/show/349551/venmo.svg" title="Venmo" />
+      <span>Venmo</span>
+    </a>
+    <a href="https://discordapp.com/users/309491819752718346" target="_blank">
+      <img src="https://www.svgrepo.com/show/353655/discord-icon.svg" title="Discord" />
+      <span>Discord</span>
     </a>
   </div>
-
-  <div class="grid grid-cols-3 sm:grid-cols-5 gap-6 stack-grid mb-10"> 
-    <a href="https://linkedin.com/in/v2dom" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" title="LinkedIn" /></a>
-    <a href="https://instagram.com/v2d0m" target="_blank"><img src="https://www.svgrepo.com/show/13639/instagram.svg" title="Instagram" /></a>
-    <a href="https://www.github.com/v2dom" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" title="GitHub" /></a>
-    <a href="https://account.venmo.com/u/dominickwoodward" target="_blank"><img src="https://www.svgrepo.com/show/349551/venmo.svg" title="Venmo" /></a>
-    <a href="https://discordapp.com/users/309491819752718346" target="_blank"><img src="https://www.svgrepo.com/show/353655/discord-icon.svg" title="Discord" /></a>
-  </div>
-
-  <p class="text-sm text-[#6c6f76] mt-4">© 2025 Dominick Woodward</p>
 </body>
 </html>

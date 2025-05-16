@@ -20,9 +20,54 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/iosevka@5.0.0/latin.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.0.1/latin.css">
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
+    <style>
+      .dots {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        z-index: 0;
+        pointer-events: none;
+      }
+      .dot {
+        position: absolute;
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 50%;
+        background: hsla(var(--hue), 100%, 50%, 0.15);
+        filter: blur(8px);
+        animation: swirl 60s infinite ease-in-out;
+      }
+      @keyframes swirl {
+        0% {
+          transform: scale(10) translate(0, 0) rotate(0deg);
+        }
+        100% {
+          transform: scale(16) translate(100px, -100px) rotate(360deg);
+        }
+      }
+    </style>
+</head>
+<body>
+    <div class="dots" aria-hidden="true">
+      <script>
+        const root = document.currentScript.parentElement;
+        for (let i = 0; i < 120; i++) {
+          const dot = document.createElement('div');
+          dot.className = 'dot';
+          dot.style.top = Math.random() * 100 + 'vh';
+          dot.style.left = Math.random() * 100 + 'vw';
+          dot.style.setProperty('--hue', Math.floor(Math.random() * 360));
+          dot.style.animationDuration = (40 + Math.random() * 40) + 's';
+          dot.style.animationDelay = (-Math.random() * 60) + 's';
+          root.appendChild(dot);
+        }
+      </script>
+    </div>
 </head>
 
 <body>
@@ -277,67 +322,5 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>AOS.init();</script>
-
-    <script>
-        function createShootingStar() {
-            const star = document.createElement('div');
-            star.className = 'shooting-star';
-           
-            const startX = -10;
-            const startY = Math.random() * window.innerHeight;
-            star.style.left = `${startX}px`;
-            star.style.top = `${startY}px`;
-           
-            const angle = 15 + Math.random() * 60;
-            const radians = angle * (Math.PI / 180);
-           
-            const duration = 0.8 + Math.random() * 1.7;
-           
-            const brightness = 0.7 + Math.random() * 0.5;
-            star.style.opacity = brightness;
-           
-            document.body.appendChild(star);
-           
-            const animation = star.animate([
-                {
-                    opacity: 0,
-                    transform: `translateX(0) translateY(0) rotate(${angle}deg)`
-                },
-                {
-                    opacity: brightness,
-                    transform: `translateX(${window.innerWidth * 0.4}px) translateY(${Math.tan(radians) * window.innerWidth * 0.4}px) rotate(${angle}deg)`,
-                    offset: 0.4
-                },
-                {
-                    opacity: 0,
-                    transform: `translateX(${window.innerWidth * 0.8}px) translateY(${Math.tan(radians) * window.innerWidth * 0.8}px) rotate(${angle}deg)`
-                }
-            ], {
-                duration: duration * 1000,
-                easing: 'cubic-bezier(0.1, 0.8, 0.2, 1)'
-            });
-           
-            animation.onfinish = () => {
-                star.remove();
-            };
-        }
-       
-        function startShootingStars() {
-            const starCount = 4 + Math.floor(Math.random() * 15);
-            for (let i = 0; i < starCount; i++) {
-                setTimeout(createShootingStar, i * 300);
-            }
-           
-            const nextDelay = 1000 + Math.random() * 3000;
-            setTimeout(startShootingStars, nextDelay);
-        }
-       
-        setTimeout(startShootingStars, 800);
-       
-        setTimeout(() => {
-            createShootingStar();
-            setTimeout(createShootingStar, 400);
-        }, 200);
-    </script>
 </body>
 </html>
