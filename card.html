@@ -1,19 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dominick Woodward | v2dom.dev</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/iosevka@5.0.0/latin.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.0.1/latin.css">
   <style>
-    body { font-family: sans-serif; background: #1e1f22; color: white; text-align: center; padding: 20px; }
-    a { display: block; margin: 10px; padding: 10px; background: #333; color: white; text-decoration: none; border-radius: 8px; }
+    body {
+      background-color: #524835;
+      font-family: 'Iosevka', monospace;
+      color: white;
+    }
+    .stack-grid img {
+      width: 48px;
+      height: 48px;
+      transition: transform 0.2s ease-in-out;
+    }
+    .stack-grid img:hover {
+      transform: scale(1.2) translateY(-4px);
+    }
+    .contact a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s ease-in-out;
+    }
+    .contact img {
+      width: 96px;
+      height: 96px;
+      opacity: 0.8;
+      transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    }
+    .contact p {
+      margin-top: 0.25rem;
+      font-size: 0.75rem;
+      color: #c1c3c7;
+      transition: transform 0.2s ease-in-out;
+    }
+    .contact a:hover img {
+      transform: scale(1.2) translateY(-4px);
+      opacity: 1;
+    }
+    .contact a:hover p {
+      transform: scale(1.1);
+    }
   </style>
 </head>
-<body>
-  <h1>Dominick Woodward</h1>
-  <p>Developer | Creator | @v2dom</p>
-  <a href="/contact.vcf" download>📇 Save My Contact</a>
-  <a href="https://instagram.com/v2dom" target="_blank">📸 Instagram</a>
-  <a href="https://venmo.com/v2dom" target="_blank">💸 Venmo</a>
-  <a href="https://linkedin.com/in/yourprofile" target="_blank">💼 LinkedIn</a>
+
+<body class="flex flex-col items-center justify-center min-h-screen p-6">
+  <div class="text-center mb-8">
+    <img src="images/v2dom.png" alt="Dominick Woodward" class="w-20 h-20 mx-auto mb-4 rounded-full border-2 border-white">
+    <h1 class="text-3xl font-bold text-[#9199A0]">Dominick Woodward</h1>
+    <p class="text-[#c1c3c7]">@v2dom</p>
+  </div>
+
+  <!-- Contact Card Section -->
+  <div class="contact mb-10 text-center mb-8">
+    <a href="/contact.vcf" download>
+      <img src="https://www.svgrepo.com/show/451521/contact-new.svg" title="Save Contact" />
+      <p>Contact Card</p>
+    </a>
+  </div>
+
+  <div class="grid grid-cols-3 sm:grid-cols-5 gap-6 stack-grid mb-10"> 
+    <a href="https://linkedin.com/in/v2dom" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" title="LinkedIn" /></a>
+    <a href="https://instagram.com/v2d0m" target="_blank"><img src="https://www.svgrepo.com/show/13639/instagram.svg" title="Instagram" /></a>
+    <a href="https://www.github.com/v2dom" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" title="GitHub" /></a>
+    <a href="https://account.venmo.com/u/dominickwoodward" target="_blank"><img src="https://www.svgrepo.com/show/349551/venmo.svg" title="Venmo" /></a>
+    <a href="https://discordapp.com/users/309491819752718346" target="_blank"><img src="https://www.svgrepo.com/show/353655/discord-icon.svg" title="Discord" /></a>
+  </div>
+
+  <p class="text-sm text-[#6c6f76] mt-4">© 2025 Dominick Woodward</p>
 </body>
 </html>
