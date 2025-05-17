@@ -4,16 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dominick Woodward | v2dom.dev</title>
+  <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const originalTitle = "Dominick Woodward @v2dom | ";
+            let title = originalTitle;
+            let currentPos = 0;
+
+            setInterval(() => {
+                document.title = title.substring(currentPos) + title.substring(0, currentPos);
+                currentPos++;
+                if (currentPos === title.length) currentPos = 0;
+            }, 200);
+        });
+    </script>
   <link rel="icon" href="images/logo.png" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/iosevka@5.0.0/latin.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.0.1/latin.css">
+  <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       background: #2e3030;
-      font-family: 'Iosevka', monospace;
+      font-family: 'JetBrains Mono';
       overflow: hidden;
     }
     .stack-grid a {
